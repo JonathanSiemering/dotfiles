@@ -27,7 +27,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # exports
-export EDITOR="nano"
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=40%"
 
 # alias
@@ -35,9 +34,6 @@ alias l='ls -lah'
 alias la='ls -lAh'
 alias ll='ls -lh'
 alias lsa='ls -lah'
-
-alias m='micro'
-alias b='bat'
 
 alias _='sudo '
 alias ..='cd ..'

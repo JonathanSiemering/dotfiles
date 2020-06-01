@@ -14,8 +14,8 @@ SAVEHIST=1000
 # Prompt and color
 autoload -U colors && colors
 export PS1="
-%F{cyan}%n%F{default colours} @ %F{green}%m%F{default colours} : %F{yellow}%~
-%F{red}$%F{default colours} "
+%F{cyan}%n%f @ %F{green}%m%f : %F{yellow}%~
+%F{red}$%f "
 
 # Edit line in editor with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
