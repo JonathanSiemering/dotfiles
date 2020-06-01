@@ -1,8 +1,7 @@
-#!/bin/zsh
+#!/bin/sh
 
 # install packages
 sudo apt update
-sudo apt -y upgrade
 sudo apt -y install zsh git curl
 
 # set zsh as default shell
