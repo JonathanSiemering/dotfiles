@@ -17,7 +17,12 @@ cd ~/.local/zsh/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 cd ~
 
-# set dotfiles
+# insert or replace dotfiles
+rm ~/.profile
 cp .profile ~/
+
+rm ~/.zshrc
 cp .zshrc ~/
+
+rm ~/.vimrc
 cp .vimrc ~/
