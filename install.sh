@@ -13,16 +13,9 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # install zsh plugins
 mkdir -p ~/.local/zsh/plugins
-cd ~/.local/zsh/plugins
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-cd ~
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.local/zsh/plugins
 
 # insert or replace dotfiles
-rm ~/.profile
 cp .profile ~/
-
-rm ~/.zshrc
 cp .zshrc ~/
-
-rm ~/.vimrc
 cp .vimrc ~/
