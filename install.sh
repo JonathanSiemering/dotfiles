@@ -20,3 +20,4 @@ cd ~
 # set dotfiles
 cp -f .profile ~/
 cp -f .zshrc ~/
+cp -f .vimrc ~/
