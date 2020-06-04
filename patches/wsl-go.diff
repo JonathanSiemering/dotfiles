@@ -1,6 +1,6 @@
---- .profile	2020-06-02 21:45:39.989125800 +0200
-+++ /home/jonathan/.profile	2020-06-02 21:45:20.653147800 +0200
-@@ -39,3 +39,8 @@
+--- .profile	2020-06-02 21:56:30.818462800 +0200
++++ /home/jonathan/.profile	2020-06-04 20:54:07.046880600 +0200
+@@ -39,3 +39,9 @@
  alias _='sudo '
  alias ..='cd ..'
  alias ~='cd ~'
@@ -8,4 +8,5 @@
 +# go
 +export PATH=$PATH:/usr/local/go/bin
 +export GOPATH=~/c/go
++export GOROOT=/usr/local/go
 +export GOPRIVATE=gitlab.tobit.com/*
