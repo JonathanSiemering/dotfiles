@@ -18,6 +18,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 cd ~
 
 # set dotfiles
-cp -f .profile ~/
-cp -f .zshrc ~/
-cp -f .vimrc ~/
+cp .profile ~/
+cp .zshrc ~/
+cp .vimrc ~/
