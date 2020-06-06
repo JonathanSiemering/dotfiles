@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# go to script folder
+cd $0
+
 # install packages
 sudo apt update
 sudo apt -y install zsh git curl
@@ -16,6 +19,6 @@ mkdir -p ~/.local/zsh/plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.local/zsh/plugins
 
 # insert or replace dotfiles
-cp .profile ~/
-cp .zshrc ~/
-cp .vimrc ~/
+cp -f .profile ~/
+cp -f .zshrc ~/
+cp -f .vimrc ~/
