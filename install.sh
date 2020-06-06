@@ -20,7 +20,7 @@ if [ -d $fzf_dir ]; then
 else
     git clone --depth 1 https://github.com/junegunn/fzf.git $fzf_dir
 fi
-$fzf_dir/install
+$fzf_dir/install --key-bindings --completion --no-update-rc
 
 # install zsh plugins
 zsh_syntax_highlighting_dir=~/.local/zsh/plugins/zsh-syntax-highlighting
