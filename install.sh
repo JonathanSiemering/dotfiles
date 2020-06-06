@@ -5,8 +5,14 @@ cd `dirname $0`
 script_dir=`pwd`
 
 # install packages
-sudo apt update
-sudo apt -y install zsh git curl
+if [ `command -v apt | wc -l` -gt 0 ]; then
+    # debian based
+    sudo apt update
+    sudo apt -y install zsh git curl
+elif [ `command -v pacman | wc -l` -gt 0 ]; then
+    # arch based
+    sudo pacman -S zsh git curl
+fi
 
 # set zsh as default shell
 chsh -s $(which zsh)
