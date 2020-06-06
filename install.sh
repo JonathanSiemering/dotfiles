@@ -8,10 +8,10 @@ script_dir=`pwd`
 if [ `command -v apt | wc -l` -gt 0 ]; then
     # debian based
     sudo apt update
-    sudo apt -y install zsh git curl
+    sudo apt -y install zsh git curl vim
 elif [ `command -v pacman | wc -l` -gt 0 ]; then
     # arch based
-    sudo pacman -S zsh git curl
+    sudo pacman -S zsh git curl vim
 fi
 
 # set zsh as default shell
