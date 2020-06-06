@@ -12,6 +12,9 @@ if [ `command -v apt | wc -l` -gt 0 ]; then
 elif [ `command -v pacman | wc -l` -gt 0 ]; then
     # arch based
     sudo pacman -S zsh git curl vim
+else
+    echo "OS not supported"
+    exit
 fi
 
 # set zsh as default shell
