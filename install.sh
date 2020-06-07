@@ -5,20 +5,27 @@ cd `dirname $0`
 script_dir=`pwd`
 
 # install packages
-if [ `command -v apt | wc -l` -gt 0 ]; then
-    # debian based
-    sudo apt update
-    sudo apt -y install zsh git curl vim
-elif [ `command -v pacman | wc -l` -gt 0 ]; then
-    # arch based
-    sudo pacman -S zsh git curl vim
-else
-    echo "OS not supported"
-    exit
+if [ `command -v zsh | wc -l` -eq 0 ] ||
+   [ `command -v git | wc -l` -eq 0 ] ||
+   [ `command -v curl | wc -l` -eq 0 ] ||
+   [ `command -v vim | wc -l` -eq 0 ]; then
+    if [ `command -v apt | wc -l` -gt 0 ]; then
+        # debian based
+        sudo apt update
+        sudo apt -y install zsh git curl vim
+    elif [ `command -v pacman | wc -l` -gt 0 ]; then
+        # arch based
+        sudo pacman -S zsh git curl vim
+    else
+        echo "OS not supported"
+        exit
+    fi
 fi
 
 # set zsh as default shell
-chsh -s $(which zsh)
+if [ $SHELL != $(which zsh) ]; then
+    chsh -s $(which zsh)
+fi
 
 # install fzf
 fzf_dir=~/.fzf
