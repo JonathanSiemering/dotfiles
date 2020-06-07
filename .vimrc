@@ -1,4 +1,4 @@
 set number
 set relativenumber
-set hls
 set autoindent
+set tabstop=4
