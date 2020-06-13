@@ -28,6 +28,7 @@ fi
 
 # exports
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=40%"
+export EDITOR="vim"
 
 # alias
 alias ls='ls --color=auto'
