@@ -4,6 +4,7 @@
  
  # exports
  export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=40%"
+ export EDITOR="vim"
 +export SSH_AUTH_SOCK=~/c/wsl-ssh-agent/ssh-agent.sock
  
  # alias
