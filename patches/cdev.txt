@@ -1,0 +1,3 @@
+
+# cdev alias
+alias cdev="cd \"\$(du -a ~/c/dev | awk '{print \$2}' | fzf)\""
