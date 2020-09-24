@@ -38,6 +38,5 @@ alias ll='ls -lh'
 alias lsa='ls -lah'
 
 alias _='sudo '
-alias _!='sudo !!'
 alias ..='cd ..'
 alias ~='cd ~'
