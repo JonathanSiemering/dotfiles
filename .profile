@@ -37,6 +37,9 @@ alias la='ls -lAh'
 alias ll='ls -lh'
 alias lsa='ls -lah'
 
+alias e='edit'
+alias se='sudoedit'
+
 alias _='sudo '
 alias ..='cd ..'
 alias ~='cd ~'
