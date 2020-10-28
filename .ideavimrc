@@ -11,7 +11,6 @@ map <leader>D :action GotoUsage<CR>
 map <leader>s :action SurroundWith<CR>
 map <leader>c :action CommentByLineComment<CR>
 map <leader>C :action CommentByBlockComment<CR>
-map <leader>f :action CollapseRegion<CR>
-map <leader>F :action ExpandRegion<CR>
 map <leader>v :action SplitVertically<CR>
 map <leader>V :action SplitHorizontally<CR>
+map <leader>e :action ShowErrorDescription<CR>
