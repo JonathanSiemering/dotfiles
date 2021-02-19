@@ -8,6 +8,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+# Disable beep
+unsetopt BEEP
+
 # Read .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
