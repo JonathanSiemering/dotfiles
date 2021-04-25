@@ -8,14 +8,15 @@ script_dir=`pwd`
 if [ `command -v zsh | wc -l` -eq 0 ] ||
    [ `command -v git | wc -l` -eq 0 ] ||
    [ `command -v curl | wc -l` -eq 0 ] ||
-   [ `command -v vim | wc -l` -eq 0 ]; then
+   [ `command -v vim | wc -l` -eq 0 ] ||
+   [ `command -v ripgrep | wc -l` -eq 0 ]; then
     if [ `command -v apt | wc -l` -gt 0 ]; then
         # debian based
         sudo apt update
-        sudo apt -y install zsh git curl vim
+        sudo apt -y install zsh git curl vim ripgrep
     elif [ `command -v pacman | wc -l` -gt 0 ]; then
         # arch based
-        sudo pacman -S zsh git curl vim
+        sudo pacman -S zsh git curl vim ripgrep
     else
         echo "OS not supported"
         exit
