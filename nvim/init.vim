@@ -6,6 +6,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 lua require'nvim-treesitter.configs'.setup{ 
@@ -40,8 +42,6 @@ colorscheme gruvbox
 nnoremap gb <cmd>bn<cr>
 nnoremap gB <cmd>bp<cr>
 
-nnoremap <leader>bd <cmd>bd<cr>
-
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fF <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
@@ -56,4 +56,9 @@ nnoremap <leader>da <cmd>lua require('telescope.builtin').lsp_code_actions()<cr>
 nnoremap <leader>dA <cmd>lua require('telescope.builtin').lsp_range_code_actions()<cr>
 
 nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
-nnoremap <leader>gc <cmd>lua require('telescope.builtin').git_commits()<cr>
+nnoremap <leader>gs <cmd>G<cr>
+nnoremap <leader>gc <cmd>Git commit<cr>
+nnoremap <leader>gp <cmd>Git push<cr>
+nnoremap <leader>go <cmd>Git pull<cr>
+nnoremap <leader>gj <cmd>diffget //3<cr>
+nnoremap <leader>gf <cmd>diffget //2<cr>
