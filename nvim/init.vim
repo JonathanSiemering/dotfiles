@@ -8,8 +8,6 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
-lua require'lspconfig'.gopls.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.ccls.setup{ on_attach=require'completion'.on_attach }
 lua require'nvim-treesitter.configs'.setup{ 
         \   highlight = { 
         \       enable = true 
@@ -36,18 +34,6 @@ set completeopt=menuone,noinsert,noselect
 let mapleader=' '
 let g:gruvbox_contrast_dark = 'hard'
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-let g:clipboard = {
-          \   'name': 'win32yank-wsl',
-          \   'copy': {
-          \      '+': 'win32yank.exe -i --crlf',
-          \      '*': 'win32yank.exe -i --crlf',
-          \    },
-          \   'paste': {
-          \      '+': 'win32yank.exe -o --lf',
-          \      '*': 'win32yank.exe -o --lf',
-          \   },
-          \   'cache_enabled': 0,
-          \ }
 
 colorscheme gruvbox
 
