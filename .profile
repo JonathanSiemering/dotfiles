@@ -30,7 +30,7 @@ fi
 PATH="$HOME/.nvim/nvim-linux64/bin:$PATH"
 
 # exports
-export EDITOR="nvim"
+export EDITOR="vim"
 
 # alias
 alias vi='nvim'
