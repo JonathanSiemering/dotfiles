@@ -24,6 +24,9 @@ export PS1="
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+# Use vim mode
+bindkey -v
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Load zsh-syntax-highlighting; should be last.
