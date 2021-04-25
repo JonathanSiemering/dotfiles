@@ -52,7 +52,7 @@ fi
 
 # neovim
 nvim_dir=~/.nvim
-mkdir $nvim_dir
+mkdir -p $nvim_dir
 cd $nvim_dir
 rm -r nvim-linux64
 wget -O nvim.tar.gz https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
@@ -63,3 +63,6 @@ cd $script_dir
 cp -f .profile ~/
 cp -f .zshrc ~/
 cp -f .vimrc ~/
+
+mkdir -p ~/.config/nvim
+cp -f nvim/init.vim ~/.config/nvim
