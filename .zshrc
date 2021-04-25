@@ -24,9 +24,26 @@ export PS1="
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# Use vim mode
+# Use vim mode and set cursor shape
 bindkey -v
+export KEYTIMEOUT=1
 
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[2 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    echo -ne '\e[6 q'
+  fi
+}
+
+zle -N zle-keymap-select
+preexec() { echo -ne '\e[6 q' ;}
+
+# Use fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Load zsh-syntax-highlighting; should be last.
