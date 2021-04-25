@@ -50,6 +50,15 @@ else
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $zsh_syntax_highlighting_dir
 fi
 
+# neovim
+nvim_dir=~/.nvim
+mkdir $nvim_dir
+cd $nvim_dir
+rm -r nvim-linux64
+wget -O nvim.tar.gz https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+tar xzf nvim.tar.gz
+cd $script_dir
+
 # insert or replace dotfiles
 cp -f .profile ~/
 cp -f .zshrc ~/

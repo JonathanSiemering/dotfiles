@@ -26,11 +26,16 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# add nvim to path
+PATH="$HOME/.nvim/nvim-linux64/bin:$PATH"
+
 # exports
-export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=40%"
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # alias
+alias vi='nvim'
+alias vim='nvim'
+
 alias ls='ls --color=auto'
 alias l='ls -lah'
 alias la='ls -lAh'

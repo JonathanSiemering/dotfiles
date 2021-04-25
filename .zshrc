@@ -44,6 +44,7 @@ zle -N zle-keymap-select
 preexec() { echo -ne '\e[6 q' ;}
 
 # Use fzf
+export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=40%"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Load zsh-syntax-highlighting; should be last.
