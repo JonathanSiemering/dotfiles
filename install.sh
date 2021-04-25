@@ -64,5 +64,5 @@ cp -f .profile ~/
 cp -f .zshrc ~/
 cp -f .vimrc ~/
 
-mkdir -p ~/.config/nvim
+mkdir -p ~/.config/nvim/plugin
 cp -f nvim/init.vim ~/.config/nvim/init.vim
