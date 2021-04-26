@@ -7,6 +7,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
