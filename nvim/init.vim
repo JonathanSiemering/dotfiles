@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'bling/vim-bufferline'
+Plug 'akinsho/nvim-bufferline.lua'
 Plug 'gruvbox-community/gruvbox'
 Plug 'mbbill/undotree'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -16,8 +16,9 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
-lua require('nvim-autopairs').setup()
-lua require'nvim-treesitter.configs'.setup{ 
+lua require('bufferline').setup{}
+lua require('nvim-autopairs').setup{}
+lua require('nvim-treesitter.configs').setup{ 
         \   highlight = { 
         \       enable = true 
         \   },
