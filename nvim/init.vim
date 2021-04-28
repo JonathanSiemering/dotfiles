@@ -1,22 +1,31 @@
 call plug#begin('~/.vim/plugged')
 Plug 'gruvbox-community/gruvbox'
+Plug 'mbbill/undotree'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/nvim-compe'
+Plug 'windwp/nvim-autopairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
+lua require('nvim-autopairs').setup()
 lua require'nvim-treesitter.configs'.setup{ 
         \   highlight = { 
         \       enable = true 
+        \   },
+        \   autopairs = {
+        \       enable = true
         \   }
         \ }
 
+set termguicolors
 set relativenumber
 set nohlsearch
 set noerrorbells
@@ -35,15 +44,29 @@ set signcolumn=yes
 set completeopt=menuone,noinsert,noselect
 
 let mapleader=' '
+
 let g:gruvbox_contrast_dark = 'hard'
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-<<<<<<< HEAD
-let g:completion_menu_length = 1
-=======
-let g:completion_trigger_on_delete = 1
->>>>>>> 1788788ab145624d04578a80c791f2c231ee0548
+
+let g:nvim_tree_width = 30
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
+let g:nvim_tree_gitignore = 1
+let g:nvim_tree_git_hl = 1
+let g:nvim_tree_lsp_diagnostics = 1
+
+let g:compe = {}
+let g:compe.enabled = v:true
+let g:compe.autocomplete = v:true
+let g:compe.preselect = 'disable'
+let g:compe.documentation = v:true
+let g:compe.source = {}
+let g:compe.source.calc = v:true
+let g:compe.source.nvim_lsp = v:true
 
 colorscheme gruvbox
+highlight clear SignColumn
+
+nnoremap <F2> :NvimTreeToggle<CR>
+nnoremap <F3> :UndotreeToggle<CR>
 
 nnoremap gb <cmd>bn<cr>
 nnoremap gB <cmd>bp<cr>
