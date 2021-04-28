@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-bufferline'
 Plug 'gruvbox-community/gruvbox'
 Plug 'mbbill/undotree'
 Plug 'kyazdani42/nvim-web-devicons'
