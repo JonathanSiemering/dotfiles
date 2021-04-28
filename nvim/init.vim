@@ -37,7 +37,11 @@ set completeopt=menuone,noinsert,noselect
 let mapleader=' '
 let g:gruvbox_contrast_dark = 'hard'
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+<<<<<<< HEAD
 let g:completion_menu_length = 1
+=======
+let g:completion_trigger_on_delete = 1
+>>>>>>> 1788788ab145624d04578a80c791f2c231ee0548
 
 colorscheme gruvbox
 
