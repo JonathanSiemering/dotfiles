@@ -51,13 +51,13 @@ else
 fi
 
 # neovim
-nvim_dir=~/.nvim
-mkdir -p $nvim_dir
-cd $nvim_dir
-rm -r nvim-linux64
-wget -O nvim.tar.gz https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-tar xzf nvim.tar.gz
-cd $script_dir
+# nvim_dir=~/.nvim
+# mkdir -p $nvim_dir
+# cd $nvim_dir
+# rm -r nvim-linux64
+# wget -O nvim.tar.gz https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+# tar xzf nvim.tar.gz
+# cd $script_dir
 
 # insert or replace dotfiles
 cp -f .profile ~/
