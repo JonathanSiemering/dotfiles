@@ -4,5 +4,6 @@ lua require('lspconfig').omnisharp.setup{
         \       "--languageserver",
         \       "--hostPID",
         \       tostring(vim.fn.getpid())
-        \   }
+        \   },
+        \   on_attach=require('completion').on_attach 
         \ }

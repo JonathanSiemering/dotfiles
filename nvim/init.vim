@@ -8,7 +8,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
+Plug 'nvim-lua/completion-nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-fugitive'
@@ -24,17 +24,6 @@ lua require('nvim-treesitter.configs').setup{
         \   },
         \   autopairs = {
         \       enable = true
-        \   }
-        \ }
-lua require('compe').setup{
-        \   enable = true,
-        \   autocomplete = true,
-        \   preselect = 'disable',
-        \   min_length = 3,
-        \   documentation = true,
-        \   source = {
-        \       calc = true,
-        \       nvim_lsp = true
         \   }
         \ }
 
@@ -59,6 +48,10 @@ set completeopt=menuone,noinsert,noselect
 let mapleader=' '
 
 let g:gruvbox_contrast_dark = 'hard'
+
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+let g:completion_menu_length = 1
+let g:completion_trigger_on_delete = 1
 
 let g:nvim_tree_width = 30
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
