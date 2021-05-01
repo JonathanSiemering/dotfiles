@@ -67,8 +67,8 @@ let g:compe.source.nvim_lsp = v:true
 colorscheme gruvbox
 highlight clear SignColumn
 
-nnoremap <F2> :NvimTreeToggle<CR>
-nnoremap <F3> :UndotreeToggle<CR>
+nnoremap <F2> <cmd>NvimTreeToggle<CR>
+nnoremap <F3> <cmd>UndotreeToggle<CR>
 
 nnoremap gb <cmd>bn<cr>
 nnoremap gB <cmd>bp<cr>
