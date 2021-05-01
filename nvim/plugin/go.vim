@@ -1,1 +1,1 @@
-lua require'lspconfig'.gopls.setup{}
+lua require('lspconfig').gopls.setup{}

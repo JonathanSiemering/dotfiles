@@ -47,3 +47,6 @@ dotfiles/install.sh
 
 # ccls 
 #cp -f dotfiles/nvim/plugin/ccls.vim ~/.config/nvim/plugin/ccls.vim
+
+# csharp 
+#cp -f dotfiles/nvim/plugin/csharp.vim ~/.config/nvim/plugin/csharp.vim
