@@ -26,6 +26,17 @@ lua require('nvim-treesitter.configs').setup{
         \       enable = true
         \   }
         \ }
+lua require('compe').setup{
+        \   enable = true,
+        \   autocomplete = true,
+        \   preselect = 'disable',
+        \   min_length = 3,
+        \   documentation = true,
+        \   source = {
+        \       calc = true,
+        \       nvim_lsp = true
+        \   }
+        \ }
 
 set termguicolors
 set relativenumber
@@ -54,15 +65,6 @@ let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
 let g:nvim_tree_gitignore = 1
 let g:nvim_tree_git_hl = 1
 let g:nvim_tree_lsp_diagnostics = 1
-
-let g:compe = {}
-let g:compe.enabled = v:true
-let g:compe.autocomplete = v:true
-let g:compe.preselect = 'disable'
-let g:compe.documentation = v:true
-let g:compe.source = {}
-let g:compe.source.calc = v:true
-let g:compe.source.nvim_lsp = v:true
 
 colorscheme gruvbox
 highlight clear SignColumn
