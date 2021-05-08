@@ -13,6 +13,9 @@ dotfiles/install.sh
 
 # +++ Patches +++
 
+# go
+#cat dotfiles/patches/go.txt >> ~/.profile
+
 # wls-go
 #cat dotfiles/patches/wsl-go.txt >> ~/.profile
 
