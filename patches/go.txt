@@ -1,6 +1,6 @@
 
 # go
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:~/go/bin
 export GOPATH=~/go
 export GOROOT=/usr/local/go
 export GOPRIVATE=gitlab.tobit.com/*
