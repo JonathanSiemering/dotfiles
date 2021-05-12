@@ -13,10 +13,10 @@ if [ `command -v zsh | wc -l` -eq 0 ] ||
     if [ `command -v apt | wc -l` -gt 0 ]; then
         # debian based
         sudo apt update
-        sudo apt -y install zsh git curl vim ripgrep
+        sudo apt -y install zsh git curl wget vim ripgrep make cmake gcc
     elif [ `command -v pacman | wc -l` -gt 0 ]; then
         # arch based
-        sudo pacman -S zsh git curl vim ripgrep
+        sudo pacman -S zsh git curl wget vim ripgrep make cmake gcc
     else
         echo "OS not supported"
         exit
