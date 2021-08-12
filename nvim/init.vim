@@ -90,6 +90,8 @@ inoremap ? ?<c-g>u
 " Move text
 nnoremap <c-j> :m .+1<cr>==
 nnoremap <c-k> :m .-2<cr>==
+inoremap <c-j> <esc>:m .+1<cr>==i
+inoremap <c-k> <esc>:m .-2<cr>==i
 vnoremap <c-j> :m '>+1<cr>gv=gv
 vnoremap <c-k> :m '<-2<cr>gv=gv
 
