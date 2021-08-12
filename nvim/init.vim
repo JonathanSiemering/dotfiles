@@ -82,11 +82,11 @@ nnoremap <leader>fF <cmd>lua require('telescope.builtin').current_buffer_fuzzy_f
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-nnoremap <leader>fd <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
-nnoremap <leader>fr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 
-nnoremap <leader>df <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
-nnoremap <leader>dw <cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>
+nnoremap <leader>df <cmd>lua require('telescope.builtin').lsp_references()<cr>
+nnoremap <leader>dF <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
+nnoremap <leader>de <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
+nnoremap <leader>dE <cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>
 nnoremap <leader>da <cmd>lua require('lspsaga.codeaction').code_action()<cr>
 nnoremap <leader>dA <cmd>lua require('lspsaga.codeaction').range_code_action()<cr>
 nnoremap <leader>dd <cmd>lua require('lspsaga.hover').render_hover_doc()<cr>
