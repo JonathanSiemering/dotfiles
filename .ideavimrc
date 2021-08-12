@@ -3,6 +3,7 @@ set number
 set relativenumber
 set autoindent
 set clipboard=ideaput
+set scrolloff=8
 
 """ Mapping
 let mapleader=","
