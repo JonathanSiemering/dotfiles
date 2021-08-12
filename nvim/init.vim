@@ -10,6 +10,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/nvim-compe'
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-fugitive'
@@ -18,7 +19,13 @@ Plug 'vim-airline/vim-airline'
 call plug#end()
 
 lua require('bufferline').setup{}
-lua require('nvim-autopairs').setup{}
+lua require('nvim-autopairs').setup{
+        \   check_ts = true
+        \ }
+lua require('nvim-autopairs.completion.compe').setup{
+        \   map_cr = true,
+        \   map_complete = true
+        \ }
 lua require('nvim-treesitter.configs').setup{ 
         \   highlight = { 
         \       enable = true 
