@@ -87,6 +87,12 @@ inoremap . .<c-g>u
 inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 
+" Move text
+nnoremap <c-j> :m .+1<cr>==
+nnoremap <c-k> :m .-2<cr>==
+vnoremap <c-j> :m '>+1<cr>gv=gv
+vnoremap <c-k> :m '<-2<cr>gv=gv
+
 " Menus
 nnoremap <F2> <cmd>NvimTreeToggle<CR>
 nnoremap <F3> <cmd>UndotreeToggle<CR>
