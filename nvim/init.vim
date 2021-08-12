@@ -8,6 +8,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim'
 Plug 'nvim-lua/completion-nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -24,6 +25,14 @@ lua require('nvim-treesitter.configs').setup{
         \   },
         \   autopairs = {
         \       enable = true
+        \   }
+        \ }
+lua require('lspsaga').init_lsp_saga{
+        \   code_action_keys = {
+        \       quit = '<esc>', exec = '<cr>'
+        \   },
+        \   rename_action_keys = {
+        \       quit = '<esc>', exec = '<cr>'
         \   }
         \ }
 
@@ -78,8 +87,12 @@ nnoremap <leader>fr <cmd>lua require('telescope.builtin').lsp_references()<cr>
 
 nnoremap <leader>df <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
 nnoremap <leader>dw <cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>
-nnoremap <leader>da <cmd>lua require('telescope.builtin').lsp_code_actions()<cr>
-nnoremap <leader>dA <cmd>lua require('telescope.builtin').lsp_range_code_actions()<cr>
+nnoremap <leader>da <cmd>lua require('lspsaga.codeaction').code_action()<cr>
+nnoremap <leader>dA <cmd>lua require('lspsaga.codeaction').range_code_action()<cr>
+nnoremap <leader>dd <cmd>lua require('lspsaga.hover').render_hover_doc()<cr>
+nnoremap <leader>dD <cmd>lua require('lspsaga.signaturehelp').signature_help()<cr>
+nnoremap <leader>dr <cmd>lua require('lspsaga.rename').rename()<cr>
+nnoremap <leader>ds <cmd>lua require('lspsaga.provider').preview_definition()<cr>
 
 nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
 nnoremap <leader>gs <cmd>G<cr>
@@ -88,3 +101,5 @@ nnoremap <leader>gp <cmd>Git push<cr>
 nnoremap <leader>go <cmd>Git pull<cr>
 nnoremap <leader>gj <cmd>diffget //3<cr>
 nnoremap <leader>gf <cmd>diffget //2<cr>
+
+nnoremap <leader>t <cmd>lua require('lspsaga.floaterm').open_float_terminal()<cr>
