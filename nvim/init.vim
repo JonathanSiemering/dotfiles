@@ -78,18 +78,31 @@ let g:nvim_tree_lsp_diagnostics = 1
 colorscheme gruvbox
 highlight clear SignColumn
 
+" Seperate yy vom Y
+nnoremap Y y$
+
+" Undo break points
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+" Menus
 nnoremap <F2> <cmd>NvimTreeToggle<CR>
 nnoremap <F3> <cmd>UndotreeToggle<CR>
 
+" Movement
 nnoremap gb <cmd>bn<cr>
 nnoremap gB <cmd>bp<cr>
 
+" Finder
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fF <cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+" Code Diagnostics
 nnoremap <leader>df <cmd>lua require('telescope.builtin').lsp_references()<cr>
 nnoremap <leader>dF <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
 nnoremap <leader>de <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
@@ -101,6 +114,7 @@ nnoremap <leader>dD <cmd>lua require('lspsaga.signaturehelp').signature_help()<c
 nnoremap <leader>dr <cmd>lua require('lspsaga.rename').rename()<cr>
 nnoremap <leader>ds <cmd>lua require('lspsaga.provider').preview_definition()<cr>
 
+" Git
 nnoremap <leader>gb <cmd>lua require('telescope.builtin').git_branches()<cr>
 nnoremap <leader>gs <cmd>G<cr>
 nnoremap <leader>gc <cmd>Git commit<cr>
@@ -109,4 +123,5 @@ nnoremap <leader>go <cmd>Git pull<cr>
 nnoremap <leader>gj <cmd>diffget //3<cr>
 nnoremap <leader>gf <cmd>diffget //2<cr>
 
+" Terminal
 nnoremap <leader>t <cmd>lua require('lspsaga.floaterm').open_float_terminal()<cr>
