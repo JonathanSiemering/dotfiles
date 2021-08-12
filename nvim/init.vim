@@ -19,9 +19,7 @@ Plug 'vim-airline/vim-airline'
 call plug#end()
 
 lua require('bufferline').setup{}
-lua require('nvim-autopairs').setup{
-        \   check_ts = true
-        \ }
+lua require('nvim-autopairs').setup{}
 lua require('nvim-autopairs.completion.compe').setup{
         \   map_cr = true,
         \   map_complete = true
@@ -29,9 +27,6 @@ lua require('nvim-autopairs.completion.compe').setup{
 lua require('nvim-treesitter.configs').setup{ 
         \   highlight = { 
         \       enable = true 
-        \   },
-        \   autopairs = {
-        \       enable = true
         \   }
         \ }
 lua require('lspsaga').init_lsp_saga{
@@ -44,15 +39,15 @@ lua require('lspsaga').init_lsp_saga{
         \ }
 
 set termguicolors
+set number
 set relativenumber
 set nohlsearch
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
-set nu
-set incsearch
 set scrolloff=8
+set incsearch
 set hidden
 set noswapfile
 set nobackup
@@ -78,7 +73,7 @@ let g:nvim_tree_lsp_diagnostics = 1
 colorscheme gruvbox
 highlight clear SignColumn
 
-" Seperate yy vom Y
+" Change Y to copy to end
 nnoremap Y y$
 
 " Undo break points
@@ -95,7 +90,7 @@ inoremap <c-k> <esc>:m .-2<cr>==i
 vnoremap <c-j> :m '>+1<cr>gv=gv
 vnoremap <c-k> :m '<-2<cr>gv=gv
 
-" Menus
+" Menu
 nnoremap <F2> <cmd>NvimTreeToggle<CR>
 nnoremap <F3> <cmd>UndotreeToggle<CR>
 
@@ -110,7 +105,7 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
-" Code Diagnostics
+" Code diagnostics
 nnoremap <leader>df <cmd>lua require('telescope.builtin').lsp_references()<cr>
 nnoremap <leader>dF <cmd>lua require('telescope.builtin').lsp_definitions()<cr>
 nnoremap <leader>de <cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>
