@@ -31,12 +31,13 @@ PATH="$HOME/.nvim/nvim-linux64/bin:$PATH"
 
 # exports
 export EDITOR="vim"
+export LS_COLORS="di=36;40:fi=37;40:ln=33;40:ex=95;40:pi=35;40:so=35;40:ow=36;40"
 
 # alias
 alias vi='nvim'
 alias vim='nvim'
 
-alias ls='ls --color=auto'
+alias ls='ls --color'
 alias l='ls -lah'
 alias la='ls -lAh'
 alias ll='ls -lh'
