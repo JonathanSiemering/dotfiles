@@ -25,9 +25,7 @@ packer.startup(function(use)
         config = function() require('plugins.gruvbox') end
     }
 
-    use {
-        'mbbill/undotree'
-    }
+    use {'mbbill/undotree'}
 
     use {
         'kyazdani42/nvim-tree.lua',
@@ -66,19 +64,15 @@ packer.startup(function(use)
         config = function() require('plugins.completion') end
     }
 
-    use {
-        'tpope/vim-fugitive'
-    }
+    use {'tpope/vim-fugitive'}
 
-    use {
-        'tpope/vim-commentary'
-    }
+    use {'tpope/vim-commentary'}
 
-    use {
-        'vim-airline/vim-airline'
-    }
+    use {'tpope/vim-endwise'}
 
     use {'rstacruz/vim-closer'}
+
+    use {'vim-airline/vim-airline'}
 
     use {
         'folke/which-key.nvim',
