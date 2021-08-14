@@ -25,6 +25,16 @@ packer.startup(function(use)
         config = function() require('plugins.gruvbox') end
     }
 
+    use {'tpope/vim-fugitive'}
+
+    use {'tpope/vim-commentary'}
+
+    use {'tpope/vim-endwise'}
+
+    use {'JonathanSiemering/vim-closer'}
+
+    use {'vim-airline/vim-airline'}
+
     use {'mbbill/undotree'}
 
     use {
@@ -57,22 +67,13 @@ packer.startup(function(use)
     }
 
     use {
-        'nvim-lua/completion-nvim',
+        'hrsh7th/nvim-compe',
         requires = {
-            {'neovim/nvim-lspconfig'}
+            {'neovim/nvim-lspconfig'},
+            {'ray-x/lsp_signature.nvim'}
         },
         config = function() require('plugins.completion') end
     }
-
-    use {'tpope/vim-fugitive'}
-
-    use {'tpope/vim-commentary'}
-
-    use {'tpope/vim-endwise'}
-
-    use {'rstacruz/vim-closer'}
-
-    use {'vim-airline/vim-airline'}
 
     use {
         'folke/which-key.nvim',

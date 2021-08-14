@@ -52,3 +52,4 @@ vim.cmd([[
     nnoremap gb <cmd>bn<cr>
     nnoremap gB <cmd>bp<cr>
 ]])
+

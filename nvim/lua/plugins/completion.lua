@@ -1,16 +1,28 @@
-local g = vim.g
+local o = vim.o
 
-g.completion_matching_strategy_list = { 'exact', 'substring', 'fuzzy' }
-g.completion_menu_length = 1
-g.completion_trigger_on_delete = 1
+o.completeopt = "menuone,noselect"
+
+local compe = require('compe')
+
+compe.setup{
+    enable = true;
+    autocomplete = true;
+    min_length = 1;
+    preselect = 'disable';
+    documentation = {};
+    source = {
+        path = true;
+        buffer = true;
+        calc = true;
+        nvim_lsp = true;
+        nvim_lua = true;
+    }
+}
 
 local lsp = require('lspconfig')
-local completion = require('completion')
 
 -- Go
-lsp.gopls.setup{
-    on_attach = completion.on_attach
-}
+lsp.gopls.setup{}
 
 -- C#
 lsp.omnisharp.setup{
@@ -19,17 +31,24 @@ lsp.omnisharp.setup{
         "--languageserver",
         "--hostPID",
         tostring(vim.fn.getpid())
-    },
-    on_attach = completion.on_attach
+    }
 }
 
 -- C++
-lsp.ccls.setup{
-    on_attach = completion.on_attach
-}
+lsp.ccls.setup{}
 
 -- Lua
 lsp.sumneko_lua.setup{
-    cmd = { "/usr/sbin/lua-language-server" },
-    on_attach = completion.on_attach
+    cmd = {
+        "/home/jonathan/lua/lua-language-server/bin/Linux/lua-language-server",
+        "/home/jonathan/lua/lua-language-server/main.lua"
+    }
 }
+
+local signature = require('lsp_signature')
+
+signature.setup({
+    bind = true,
+    floating_window = true,
+    extra_trigger_chars = {"(",","}
+})
