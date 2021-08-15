@@ -65,4 +65,4 @@ cp -f .zshrc ~/
 cp -f .vimrc ~/
 
 mkdir -p ~/.config/nvim/plugin
-cp -f nvim/init.vim ~/.config/nvim/init.vim
+cp -rf nvim/* ~/.config/nvim/
