@@ -1,0 +1,23 @@
+{
+    "background": "#141414",
+    "black": "#141414",
+    "blue": "#4B91FF",
+    "brightBlack": "#767676",
+    "brightBlue": "#79A3FF",
+    "brightCyan": "#90CFE5",
+    "brightGreen": "#96C686",
+    "brightPurple": "#B45F98",
+    "brightRed": "#E65D5F",
+    "brightWhite": "#BFBFBF",
+    "brightYellow": "#F9F1A5",
+    "cursorColor": "#FFFFFF",
+    "cyan": "#62C8DD",
+    "foreground": "#D9D9D9",
+    "green": "#2AB336",
+    "name": "TheCakeIsALie",
+    "purple": "#B530BF",
+    "red": "#FF3B3B",
+    "selectionBackground": "#FFFFFF",
+    "white": "#D9D9D9",
+    "yellow": "#CCB627"
+}
