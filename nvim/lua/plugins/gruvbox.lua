@@ -6,6 +6,5 @@ vim.cmd([[
     colorscheme gruvbox
     highlight clear SignColumn
 
-    highlight String None
-    highlight link String GruvboxYellowBold
+    highlight String guifg=#bcd7de
 ]])
