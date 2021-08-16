@@ -24,8 +24,8 @@ if [ `command -v zsh | wc -l` -eq 0 ] ||
 fi
 
 # set zsh as default shell
-if [ $SHELL != $(which zsh) ]; then
-    chsh -s $(which zsh)
+if [ $SHELL != '/bin/zsh' ]; then
+    chsh -s /bin/zsh
 fi
 
 # install fzf
