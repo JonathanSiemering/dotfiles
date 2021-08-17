@@ -61,6 +61,3 @@ cd $script_dir
 cp -f .profile ~/
 cp -f .zshrc ~/
 cp -f .vimrc ~/
-
-rm ~/.config/nvim
-ln -s nvim ~/.config/nvim
