@@ -24,9 +24,7 @@ if [ `command -v zsh | wc -l` -eq 0 ] ||
 fi
 
 # set zsh as default shell
-if [ $SHELL != '/bin/zsh' ]; then
-    chsh -s /bin/zsh
-fi
+chsh -s /bin/zsh
 
 # install fzf
 fzf_dir=~/.fzf
@@ -64,5 +62,5 @@ cp -f .profile ~/
 cp -f .zshrc ~/
 cp -f .vimrc ~/
 
-mkdir -p ~/.config/nvim/plugin
-cp -rf nvim/* ~/.config/nvim/
+rm ~/.config/nvim
+ln -s nvim ~/.config/nvim
