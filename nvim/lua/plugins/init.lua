@@ -1,8 +1,16 @@
+-- Install packer
 local va = require('utils.vars')
 local fn = require('utils.fn')
 
 local repo = 'https://github.com/wbthomason/packer.nvim'
+local path = va.dataPath .. '/site/pack/packer/start/packer.nvim'
 
+if not fn.exists(path) then
+    fn.execute('git clone ' .. repo .. ' ' .. path)
+    vim.cmd('packadd packer.nvim')
+end
+
+-- Init packer
 local packer = require('packer')
 
 packer.init({
@@ -81,3 +89,9 @@ packer.startup(function(use)
     }
 
 end)
+
+-- Auto sync packages
+if (fn.isUpdate(true)) then
+    fn.execute('cd ' .. path .. ' && git pull')
+    packer.sync()
+end
