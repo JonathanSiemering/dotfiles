@@ -75,7 +75,8 @@ packer.startup(function(use)
     use {
         'rcarriga/nvim-dap-ui',
         requires = {
-            {'mfussenegger/nvim-dap'}
+            {'mfussenegger/nvim-dap'},
+            {'theHamsta/nvim-dap-virtual-text'}
         },
         config = function() require('plugins.dap') end
     }
