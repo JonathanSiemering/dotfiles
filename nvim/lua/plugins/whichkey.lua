@@ -24,7 +24,8 @@ wk.register({
         d = {"<cmd>lua require('lspsaga.hover').render_hover_doc()<cr>", "Show document"},
         D = {"<cmd>lua require('lspsaga.signaturehelp').signature_help()<cr>", "Show signature"},
         r = {"<cmd>lua require('lspsaga.rename').rename()<cr>", "Function rename"},
-        s = {"<cmd>lua require('lspsaga.provider').preview_definition()<cr>", "Preview definition"},
+        s = {"<cmd>SymbolsOutline<cr>", "Preview definition"},
+        S = {"<cmd>lua require('lspsaga.provider').preview_definition()<cr>", "Preview definition"},
     },
     g = {
         name = 'Git',

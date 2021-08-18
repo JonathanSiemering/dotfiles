@@ -85,6 +85,14 @@ packer.startup(function(use)
     }
 
     use {
+        'simrat39/symbols-outline.nvim',
+        requires = {
+            {'neovim/nvim-lspconfig'}
+        },
+        config = function() require('plugins.symbolsoutline') end
+    }
+
+    use {
         'folke/which-key.nvim',
         config = function() require('plugins.whichkey') end
     }
