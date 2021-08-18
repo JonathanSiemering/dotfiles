@@ -20,11 +20,10 @@ wk.register({
         e = {"<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<cr>", "Diagnostics file"},
         w = {"<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>", "Diagnostics workspace"},
         a = {"<cmd>lua require('lspsaga.codeaction').code_action()<cr>", "Code actions"},
-        q = {"<cmd>lua require('lspsaga.codeaction').range_code_action()<cr>", "Range code actions"},
+        s = {"<cmd>lua require('lspsaga.codeaction').range_code_action()<cr>", "Range code actions"},
         j = {"<cmd>lua require('lspsaga.hover').render_hover_doc()<cr>", "Show document"},
         k = {"<cmd>lua require('lspsaga.signaturehelp').signature_help()<cr>", "Show signature"},
         r = {"<cmd>lua require('lspsaga.rename').rename()<cr>", "Function rename"},
-        s = {"<cmd>SymbolsOutline<cr>", "Symbols outline"},
         p = {"<cmd>lua require('lspsaga.provider').preview_definition()<cr>", "Preview definition"},
     },
     s = {

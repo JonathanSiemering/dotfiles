@@ -45,6 +45,7 @@ vim.cmd([[
 vim.cmd([[
     nnoremap <F2> <cmd>NvimTreeToggle<CR>
     nnoremap <F3> <cmd>UndotreeToggle<CR>
+    nnoremap <F4> <cmd>SymbolsOutline<CR>
 ]])
 --
 -- Movement

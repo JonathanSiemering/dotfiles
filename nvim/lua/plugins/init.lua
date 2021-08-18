@@ -73,6 +73,14 @@ packer.startup(function(use)
     }
 
     use {
+        'simrat39/symbols-outline.nvim',
+        requires = {
+            {'neovim/nvim-lspconfig'}
+        },
+        config = function() require('plugins.symbolsoutline') end
+    }
+
+    use {
         'rcarriga/nvim-dap-ui',
         requires = {
             {'mfussenegger/nvim-dap'},
@@ -92,14 +100,6 @@ packer.startup(function(use)
     use {'vim-airline/vim-airline'}
 
     use {'mbbill/undotree'}
-
-    use {
-        'simrat39/symbols-outline.nvim',
-        requires = {
-            {'neovim/nvim-lspconfig'}
-        },
-        config = function() require('plugins.symbolsoutline') end
-    }
 
     use {
         'folke/which-key.nvim',
