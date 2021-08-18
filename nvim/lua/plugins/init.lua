@@ -33,18 +33,6 @@ packer.startup(function(use)
         config = function() require('plugins.gruvbox') end
     }
 
-    use {'tpope/vim-fugitive'}
-
-    use {'tpope/vim-commentary'}
-
-    use {'tpope/vim-endwise'}
-
-    use {'JonathanSiemering/vim-closer'}
-
-    use {'vim-airline/vim-airline'}
-
-    use {'mbbill/undotree'}
-
     use {
         'kyazdani42/nvim-tree.lua',
         requires = {
@@ -81,8 +69,28 @@ packer.startup(function(use)
             {'neovim/nvim-lspconfig'},
             {'ray-x/lsp_signature.nvim'}
         },
-        config = function() require('plugins.completion') end
+        config = function() require('plugins.lsp') end
     }
+
+    use {
+        'rcarriga/nvim-dap-ui',
+        requires = {
+            {'mfussenegger/nvim-dap'}
+        },
+        config = function() require('plugins.dap') end
+    }
+
+    use {'tpope/vim-fugitive'}
+
+    use {'tpope/vim-commentary'}
+
+    use {'tpope/vim-endwise'}
+
+    use {'JonathanSiemering/vim-closer'}
+
+    use {'vim-airline/vim-airline'}
+
+    use {'mbbill/undotree'}
 
     use {
         'simrat39/symbols-outline.nvim',
