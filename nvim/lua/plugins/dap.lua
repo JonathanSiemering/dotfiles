@@ -1,6 +1,7 @@
 local dap = require('dap')
 local dapui = require('dapui')
 
+-- GO
 dap.adapters.go = function(callback, config)
     local stdout = vim.loop.new_pipe(false)
     local handle
@@ -41,6 +42,24 @@ dap.adapters.go = function(callback, config)
       name = "Debug",
       request = "launch",
       program = "."
+    }
+}
+
+-- C#
+dap.adapters.netcoredbg = {
+    type = 'executable',
+    command = os.getenv('HOME') .. '/.local/share/netcoredbg/netcoredbg',
+    args = {'--interpreter=vscode'}
+}
+
+dap.configurations.cs = {
+    {
+        type = 'netcoredbg',
+        name = 'Debug',
+        request = 'launch',
+        program = function()
+            return vim.fn.input('Path to dll ', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+        end
     }
 }
 
