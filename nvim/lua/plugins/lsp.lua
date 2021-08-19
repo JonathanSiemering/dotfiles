@@ -1,8 +1,9 @@
 local o = vim.o
+local lsp = require('lspconfig')
+local compe = require('compe')
+local signature = require('lsp_signature')
 
 o.completeopt = "menuone,noselect"
-
-local compe = require('compe')
 
 compe.setup{
     enable = true;
@@ -18,8 +19,6 @@ compe.setup{
         nvim_lua = true;
     }
 }
-
-local lsp = require('lspconfig')
 
 -- Go
 lsp.gopls.setup{}
@@ -44,8 +43,6 @@ lsp.sumneko_lua.setup{
         os.getenv('HOME') .. "/lua/lua-language-server/main.lua"
     }
 }
-
-local signature = require('lsp_signature')
 
 signature.setup({
     bind = true,

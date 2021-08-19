@@ -101,6 +101,8 @@ packer.startup(function(use)
 
     use {'mbbill/undotree'}
 
+    use {'RRethy/vim-illuminate'}
+
     use {
         'folke/which-key.nvim',
         config = function() require('plugins.whichkey') end
