@@ -89,6 +89,8 @@ packer.startup(function(use)
         config = function() require('plugins.dap') end
     }
 
+    use {'vim-airline/vim-airline'}
+
     use {'tpope/vim-fugitive'}
 
     use {'tpope/vim-commentary'}
@@ -97,11 +99,17 @@ packer.startup(function(use)
 
     use {'JonathanSiemering/vim-closer'}
 
-    use {'vim-airline/vim-airline'}
-
     use {'mbbill/undotree'}
 
     use {'RRethy/vim-illuminate'}
+
+    use {
+        'lewis6991/gitsigns.nvim',
+        requires = {
+            {'nvim-lua/plenary.nvim'}
+        },
+        config = function() require('plugins.gitsigns') end
+    }
 
     use {
         'folke/which-key.nvim',
