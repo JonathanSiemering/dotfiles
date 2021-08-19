@@ -27,7 +27,7 @@ lsp.gopls.setup{}
 -- C#
 lsp.omnisharp.setup{
     cmd = {
-        "/home/jonathan/.local/omnisharp/run",
+        os.getenv('HOME') .. "/.local/omnisharp/run",
         "--languageserver",
         "--hostPID",
         tostring(vim.fn.getpid())
@@ -40,8 +40,8 @@ lsp.ccls.setup{}
 -- Lua
 lsp.sumneko_lua.setup{
     cmd = {
-        "/home/jonathan/lua/lua-language-server/bin/Linux/lua-language-server",
-        "/home/jonathan/lua/lua-language-server/main.lua"
+        os.getenv('HOME') .. "/lua/lua-language-server/bin/Linux/lua-language-server",
+        os.getenv('HOME') .. "/lua/lua-language-server/main.lua"
     }
 }
 
