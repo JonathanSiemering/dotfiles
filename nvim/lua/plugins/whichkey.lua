@@ -28,9 +28,11 @@ wk.register({
     },
     s = {
         name = 'Debug',
-        b = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle breakpoint"},
-        v = {"<cmd>let g:dap_virtual_text = v:true<cr>", "Virtual text show"},
-        V = {"<cmd>let g:dap_virtual_text = v:false<cr>", "Virtual text hide"}
+        c = {"<cmd>lua require('telescope').extensions.dap.commands{}<cr>", "Commands"},
+        s = {"<cmd>lua require('telescope').extensions.dap.configurations{}<cr>", "Configurations"},
+        b = {"<cmd>lua require('telescope').extensions.dap.list_breakpoints{}<cr>", "List breakpoints"},
+        v = {"<cmd>lua require('telescope').extensions.dap.variables{}<cr>", "Varibales"},
+        f = {"<cmd>lua require('telescope').extensions.dap.frames{}<cr>", "Frames"}
     },
     g = {
         name = 'Git',
