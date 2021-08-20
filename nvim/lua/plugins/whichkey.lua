@@ -41,6 +41,7 @@ wk.register({
         c = {"<cmd>Git commit<cr>", "Commit"},
         p = {"<cmd>Git push<cr>", "Push"},
         o = {"<cmd>Git pull<cr>", "Pull"},
+        d = {"<cmd>Git diff<cr>", "Diff"},
         j = {"cmd>diffget //3<cr>", "Merge use mine"},
         f = {"cmd>diffget //2<cr>", "Merge use theres"},
     },
