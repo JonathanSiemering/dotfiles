@@ -64,6 +64,11 @@ dap.configurations.cs = {
     }
 }
 
+vim.fn.sign_define('DapBreakpoint', {text = '', texthl = 'DapBreakpoint', linehl = '', numhl = ''})
+vim.fn.sign_define('DapLogPoint', {text = '', texthl = 'DapLogPoint', linehl = '', numhl = ''})
+vim.fn.sign_define('DapStopped', {text = '', texthl = 'DapStopped', linehl = 'DapStoppedBg', numhl = ''})
+vim.fn.sign_define('DapBreakpointRejected', {text = '', texthl = 'DapBreakpointRejected', linehl = '', numhl = ''})
+
 dapui.setup({})
 
 g.dap_virtual_text = true
