@@ -1,3 +1,4 @@
+local g = vim.g
 local dap = require('dap')
 local dapui = require('dapui')
 
@@ -64,3 +65,5 @@ dap.configurations.cs = {
 }
 
 dapui.setup({})
+
+g.dap_virtual_text = true

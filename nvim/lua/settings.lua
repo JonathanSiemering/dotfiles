@@ -47,10 +47,13 @@ vim.cmd([[
     nnoremap <F3> <cmd>UndotreeToggle<CR>
     nnoremap <F4> <cmd>SymbolsOutline<CR>
 ]])
---
--- Movement
+
+-- Debug
 vim.cmd([[
-    nnoremap gb <cmd>bn<cr>
-    nnoremap gB <cmd>bp<cr>
+    nnoremap <F5> <cmd>lua require('dap').continue()<CR>
+    nnoremap <F6> <cmd>lua require('dap').step_over()<CR>
+    nnoremap <F7> <cmd>lua require('dap').step_into()<CR>
+    nnoremap <F8> <cmd>lua require('dap').close() require('dapui').close()<CR>
+    nnoremap <F9> <cmd>lua require('dap').toggle_breakpoint()<CR>
 ]])
 

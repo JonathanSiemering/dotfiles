@@ -29,11 +29,6 @@ wk.register({
     s = {
         name = 'Debug',
         b = {"<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle breakpoint"},
-        c = {"<cmd>lua require('dap').continue()<cr>", "Continue"},
-        x = {"<cmd>lua require('dap').close()<cr>", "Close"},
-        z = {"<cmd>lua require('dapui').close()<cr>", "Close UI"},
-        j = {"<cmd>lua require('dap').step_over()<cr>", "Step over"},
-        k = {"<cmd>lua require('dap').step_into()<cr>", "Step into"},
         v = {"<cmd>let g:dap_virtual_text = v:true<cr>", "Virtual text show"},
         V = {"<cmd>let g:dap_virtual_text = v:false<cr>", "Virtual text hide"}
     },
