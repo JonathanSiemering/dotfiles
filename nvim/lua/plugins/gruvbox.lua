@@ -19,5 +19,5 @@ vim.cmd([[
     highlight link DapLogPoint GruvboxRed
     highlight link DapBreakpointRejected GruvboxRed
     highlight link DapStopped GruvboxAqua
-    highlight link DapStoppedBg guibg=#303030
+    highlight DapStoppedLineHl guibg=#303030
 ]])
