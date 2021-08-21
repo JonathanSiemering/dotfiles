@@ -6,6 +6,7 @@ bufferline.setup{
         show_buffer_close_icons = false,
         separator_style = 'thick',
         diagnostics = 'nvim_lsp',
-        numbers = 'buffer_id'
+        numbers = 'buffer_id',
+        number_style = ''
     }
 }
