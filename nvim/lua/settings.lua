@@ -58,3 +58,15 @@ vim.cmd([[
     nnoremap <F9> <cmd>lua require('dap').toggle_breakpoint()<CR>
 ]])
 
+-- Buffer
+vim.cmd([[
+    nnoremap <silent><leader>1 <cmd>BufferLineGoToBuffer 1<CR>
+    nnoremap <silent><leader>2 <cmd>BufferLineGoToBuffer 2<CR>
+    nnoremap <silent><leader>3 <cmd>BufferLineGoToBuffer 3<CR>
+    nnoremap <silent><leader>4 <cmd>BufferLineGoToBuffer 4<CR>
+    nnoremap <silent><leader>5 <cmd>BufferLineGoToBuffer 5<CR>
+    nnoremap <silent><leader>6 <cmd>BufferLineGoToBuffer 6<CR>
+    nnoremap <silent><leader>7 <cmd>BufferLineGoToBuffer 7<CR>
+    nnoremap <silent><leader>8 <cmd>BufferLineGoToBuffer 8<CR>
+    nnoremap <silent><leader>9 <cmd>BufferLineGoToBuffer 9<CR>
+]])
