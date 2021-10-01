@@ -23,6 +23,9 @@ if [ `command -v zsh | wc -l` -eq 0 ] ||
     fi
 fi
 
+#config
+mkdir -p ~/.config
+
 # set zsh as default shell
 chsh -s /bin/zsh
 
@@ -56,6 +59,9 @@ rm -r nvim-linux64
 wget -O nvim.tar.gz https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
 tar xzf nvim.tar.gz
 cd $script_dir
+
+ln -s $script_dir/nvim ~/.config
+touch $script_dir/nvim/update
 
 # insert or replace dotfiles
 cp -f .profile ~/
