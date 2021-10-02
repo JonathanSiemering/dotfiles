@@ -24,6 +24,9 @@ packer.startup(function(use)
     -- Packer itself
     use {'wbthomason/packer.nvim'}
 
+    -- Filetypes
+    use ('nathom/filetype.nvim')
+
     -- Gruvbox colorscheme
     use {
         'gruvbox-community/gruvbox',
@@ -111,7 +114,13 @@ packer.startup(function(use)
         config = function() require('plugins.bufferline') end
     }
 
-    use {'vim-airline/vim-airline'}
+    use {
+        'glepnir/galaxyline.nvim',
+        requires = {
+            {'kyazdani42/nvim-web-devicons'}
+        },
+        config = function() require('plugins.galaxyline') end
+    }
     -- --
 
     -- Git --
