@@ -45,5 +45,9 @@ wk.register({
         j = {"cmd>diffget //3<cr>", "Merge use mine"},
         f = {"cmd>diffget //2<cr>", "Merge use theres"},
     },
+    b = {
+        name = 'Buffer',
+        d = {"<cmd>bdelete<cr>", "Delete"}
+    },
     t = {"<cmd>lua require('lspsaga.floaterm').open_float_terminal()<cr>", "Open floating terminal"}
 }, { prefix = '<leader>' })
