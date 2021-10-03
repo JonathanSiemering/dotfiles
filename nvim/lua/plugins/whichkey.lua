@@ -31,7 +31,7 @@ wk.register({
         s = {"<cmd>lua require('telescope').extensions.dap.configurations{}<cr>", "Configurations"},
         b = {"<cmd>lua require('telescope').extensions.dap.list_breakpoints{}<cr>", "List breakpoints"},
         v = {"<cmd>lua require('telescope').extensions.dap.variables{}<cr>", "Varibales"},
-        f = {"<cmd>lua require('telescope').extensions.dap.frames{}<cr>", "Frames"}
+        f = {"<cmd>lua require('telescope').extensions.dap.frames{}<cr>", "Frames"},
     },
     g = {
         name = 'Git',
@@ -41,8 +41,8 @@ wk.register({
         p = {"<cmd>Git push<cr>", "Push"},
         o = {"<cmd>Git pull<cr>", "Pull"},
         d = {"<cmd>Git diff<cr>", "Diff"},
-        j = {"cmd>diffget //3<cr>", "Merge use mine"},
-        f = {"cmd>diffget //2<cr>", "Merge use theres"},
+        j = {"<cmd>diffget //3<cr>", "Merge use mine"},
+        f = {"<cmd>diffget //2<cr>", "Merge use theres"},
     },
     b = {
         name = 'Buffer',
