@@ -4,10 +4,6 @@ local vsc = require('galaxyline.provider_vcs')
 local gls = gl.section
 local seperator = '|'
 
-local lineColumn = function()
-    return vim.fn.line('.') .. ':' .. vim.fn.col('.')
-end
-
 gls.left = {
     {
         FileIcon = {
@@ -52,7 +48,9 @@ gls.left = {
     },
     {
         LineColumn = {
-            provider = {lineColumn},
+            provider = {function()
+                return vim.fn.line('.') .. ':' .. vim.fn.col('.')
+            end},
             highlight = 'GruvboxYellow'
         }
     }
@@ -95,11 +93,15 @@ gls.right = {
     },
     {
         DiffAdd = {
-            provider = {function()
+            provider = function()
                 local n = vsc.diff_add()
                 if n == nil then n = '0 ' end
                 return n
-            end},
+            end,
+            condition = function()
+                local b = vsc.get_git_branch()
+                return b ~= nil and b ~= ''
+            end,
             icon = '+',
             highlight = 'GruvboxGreen',
             separator = ' ' .. seperator .. ' '
@@ -107,22 +109,30 @@ gls.right = {
     },
     {
         DiffModified = {
-            provider = {function()
+            provider = function()
                 local n = vsc.diff_modified()
                 if n == nil then n = '0 ' end
                 return n
-            end},
+            end,
+            condition = function()
+                local b = vsc.get_git_branch()
+                return b ~= nil and b ~= ''
+            end,
             icon = '~',
             highlight = 'GruvboxYellow'
         }
     },
     {
         DiffRemove = {
-            provider = {function()
+            provider = function()
                 local n = vsc.diff_remove()
                 if n == nil then n = '0 ' end
                 return n
-            end},
+            end,
+            condition = function()
+                local b = vsc.get_git_branch()
+                return b ~= nil and b ~= ''
+            end,
             icon = '-',
             highlight = 'GruvboxRed'
         }
