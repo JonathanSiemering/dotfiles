@@ -1,5 +1,6 @@
 local gl = require('galaxyline')
 local vsc = require('galaxyline.provider_vcs')
+local fi = require('galaxyline/provider_fileinfo')
 
 local gls = gl.section
 local seperator = '|'
@@ -49,7 +50,7 @@ gls.left = {
     {
         LineColumn = {
             provider = {function()
-                return vim.fn.line('.') .. ':' .. vim.fn.col('.')
+                return vim.fn.line('.') .. ':' .. vim.fn.col('.') .. ' ' .. fi.current_line_percent():gsub('%s+', '')
             end},
             highlight = 'GruvboxYellow'
         }
