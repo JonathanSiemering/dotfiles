@@ -1,7 +1,21 @@
 local gl = require('galaxyline')
-local gls = gl.section
+local vsc = require('galaxyline.provider_vcs')
 
+local gls = gl.section
 local seperator = '|'
+
+local gitProvider = function()
+    local add = vsc.diff_add()
+    if add == nil then add = '0 ' end
+
+    local modified = vsc.diff_modified()
+    if modified == nil then modified = '0 ' end
+
+    local remove = vsc.diff_remove()
+    if remove == nil then remove = '0 ' end
+
+    return '+' .. add .. '~' .. modified .. '-' .. remove .. vsc.get_git_branch()
+end
 
 gls.left = {
     {
@@ -13,6 +27,12 @@ gls.left = {
         FileName = {
             provider = 'FileName',
             separator = seperator .. ' '
+        }
+    },
+    {
+        FileTypeName = {
+            provider = 'FileTypeName',
+            separator = ' ' .. seperator .. ' '
         }
     },
     {
@@ -69,8 +89,8 @@ gls.right = {
         }
     },
     {
-        GitBranch = {
-            provider = 'GitBranch',
+        GitProvider = {
+            provider = {gitProvider},
             separator = ' ' .. seperator .. ' '
         }
     },
