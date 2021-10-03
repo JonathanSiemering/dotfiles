@@ -4,52 +4,56 @@ local vsc = require('galaxyline.provider_vcs')
 local gls = gl.section
 local seperator = '|'
 
-local gitProvider = function()
-    local add = vsc.diff_add()
-    if add == nil then add = '0 ' end
-
-    local modified = vsc.diff_modified()
-    if modified == nil then modified = '0 ' end
-
-    local remove = vsc.diff_remove()
-    if remove == nil then remove = '0 ' end
-
-    return '+' .. add .. '~' .. modified .. '-' .. remove .. vsc.get_git_branch()
+local lineColumn = function()
+    return vim.fn.line('.') .. ':' .. vim.fn.col('.')
 end
 
 gls.left = {
     {
         FileIcon = {
-            provider = 'FileIcon'
+            provider = 'FileIcon',
+            highlight = 'GruvboxAqua'
         }
     },
     {
         FileName = {
             provider = 'FileName',
-            separator = seperator .. ' '
+            separator = seperator .. ' ',
+            highlight = 'GruvboxBlue'
         }
     },
     {
         FileTypeName = {
             provider = 'FileTypeName',
-            separator = ' ' .. seperator .. ' '
+            separator = ' ' .. seperator .. ' ',
+            highlight = 'GruvboxYellow'
         }
     },
     {
         FileFormat = {
             provider = 'FileFormat',
-            separator = ' ' .. seperator
+            separator = ' ' .. seperator,
+            highlight = 'GruvboxBlue'
         }
     },
     {
         FileEncode = {
             provider = 'FileEncode',
-            separator = ' ' .. seperator .. ' '
+            separator = ' ' .. seperator .. ' ',
+            highlight = 'GruvboxYellow'
         }
     },
     {
         FileSize = {
-            provider = 'FileSize'
+            provider = 'FileSize',
+            separator = seperator .. ' ',
+            highlight = 'GruvboxBlue'
+        }
+    },
+    {
+        LineColumn = {
+            provider = {lineColumn},
+            highlight = 'GruvboxYellow'
         }
     }
 }
@@ -85,19 +89,48 @@ gls.right = {
     },
     {
         LspClient = {
-            provider = 'GetLspClient'
+            provider = 'GetLspClient',
+            highlight = 'GruvboxAqua'
         }
     },
     {
-        GitProvider = {
-            provider = {gitProvider},
+        DiffAdd = {
+            provider = {function()
+                local n = vsc.diff_add()
+                if n == nil then n = '0 ' end
+                return n
+            end},
+            icon = '+',
+            highlight = 'GruvboxGreen',
             separator = ' ' .. seperator .. ' '
         }
     },
     {
-        LineColumn = {
-            provider = 'LineColumn',
-            separator = ' ' .. seperator
+        DiffModified = {
+            provider = {function()
+                local n = vsc.diff_modified()
+                if n == nil then n = '0 ' end
+                return n
+            end},
+            icon = '~',
+            highlight = 'GruvboxYellow'
+        }
+    },
+    {
+        DiffRemove = {
+            provider = {function()
+                local n = vsc.diff_remove()
+                if n == nil then n = '0 ' end
+                return n
+            end},
+            icon = '-',
+            highlight = 'GruvboxRed'
+        }
+    },
+    {
+        GitBranch = {
+            provider = 'GitBranch',
+            highlight = 'GruvboxAqua'
         }
     }
 }
