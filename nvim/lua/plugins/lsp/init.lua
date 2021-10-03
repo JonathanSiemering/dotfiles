@@ -1,5 +1,7 @@
+local vars = require('utils.vars')
+
 -- Change sign colum icons
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = { Error = " " .. vars.lspErrorIcon, Warn = " " .. vars.lspWarningIcon, Hint = " " .. vars.lspHintIcon, Info = " " .. vars.lspInfoIcon }
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type

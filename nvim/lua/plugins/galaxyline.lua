@@ -1,3 +1,4 @@
+local vars = require('utils.vars')
 local gl = require('galaxyline')
 local vsc = require('galaxyline.provider_vcs')
 local fi = require('galaxyline/provider_fileinfo')
@@ -61,28 +62,28 @@ gls.right = {
     {
         DiagnosticError = {
             provider = 'DiagnosticError',
-            icon = '',
+            icon = vars.lspErrorIcon,
             highlight = 'GruvboxRed'
         }
     },
     {
         DiagnosticWarn = {
             provider = 'DiagnosticWarn',
-            icon = '',
+            icon = vars.lspWarningIcon,
             highlight = 'GruvboxYellow'
         }
     },
     {
         DiagnosticHint = {
             provider = 'DiagnosticHint',
-            icon = '',
+            icon = vars.lspHintIcon,
             highlight = 'GruvboxBlue'
         }
     },
     {
         DiagnosticInfo = {
             provider = 'DiagnosticInfo',
-            icon = '',
+            icon = vars.lspInfoIcon,
             highlight = 'GruvboxBlue'
         }
     },
@@ -103,7 +104,7 @@ gls.right = {
                 local b = vsc.get_git_branch()
                 return b ~= nil and b ~= ''
             end,
-            icon = '',
+            icon = vars.gitAddIcon,
             highlight = 'GruvboxGreen',
             separator = ' ' .. seperator .. ' '
         }
@@ -119,7 +120,7 @@ gls.right = {
                 local b = vsc.get_git_branch()
                 return b ~= nil and b ~= ''
             end,
-            icon = '',
+            icon = vars.gitModifiedIcon,
             highlight = 'GruvboxYellow'
         }
     },
@@ -134,7 +135,7 @@ gls.right = {
                 local b = vsc.get_git_branch()
                 return b ~= nil and b ~= ''
             end,
-            icon = '',
+            icon = vars.gitRemoveIcon,
             highlight = 'GruvboxRed'
         }
     },

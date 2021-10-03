@@ -1,3 +1,4 @@
+local vars = require('utils.vars')
 local bufferline = require('bufferline')
 
 bufferline.setup{
@@ -9,7 +10,7 @@ bufferline.setup{
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
             local s = ""
             for e, n in pairs(diagnostics_dict) do
-                local sym = e == "error" and "" or (e == "warning" and "" or "")
+                local sym = e == "error" and vars.lspErrorIcon or (e == "warning" and vars.lspWarningIcon or vars.lspHintIcon)
                 s = s .. ' ' .. sym .. n
             end
             return s
