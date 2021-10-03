@@ -60,28 +60,28 @@ gls.right = {
     {
         DiagnosticError = {
             provider = 'DiagnosticError',
-            icon = 'E',
+            icon = '',
             highlight = 'GruvboxRed'
         }
     },
     {
         DiagnosticWarn = {
             provider = 'DiagnosticWarn',
-            icon = 'W',
+            icon = '',
             highlight = 'GruvboxYellow'
         }
     },
     {
         DiagnosticHint = {
             provider = 'DiagnosticHint',
-            icon = 'H',
+            icon = '',
             highlight = 'GruvboxBlue'
         }
     },
     {
         DiagnosticInfo = {
             provider = 'DiagnosticInfo',
-            icon = 'I',
+            icon = '',
             highlight = 'GruvboxBlue'
         }
     },
@@ -140,6 +140,7 @@ gls.right = {
     {
         GitBranch = {
             provider = 'GitBranch',
+            icon = '',
             highlight = 'GruvboxAqua'
         }
     }
