@@ -47,6 +47,5 @@ wk.register({
     b = {
         name = 'Buffer',
         d = {"<cmd>bdelete<cr>", "Delete"}
-    },
-    t = {"<cmd>lua require('lspsaga.floaterm').open_float_terminal()<cr>", "Open floating terminal"}
+    }
 }, { prefix = '<leader>' })
