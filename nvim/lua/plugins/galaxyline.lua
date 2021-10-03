@@ -102,7 +102,7 @@ gls.right = {
                 local b = vsc.get_git_branch()
                 return b ~= nil and b ~= ''
             end,
-            icon = '+',
+            icon = '',
             highlight = 'GruvboxGreen',
             separator = ' ' .. seperator .. ' '
         }
@@ -118,7 +118,7 @@ gls.right = {
                 local b = vsc.get_git_branch()
                 return b ~= nil and b ~= ''
             end,
-            icon = '~',
+            icon = '',
             highlight = 'GruvboxYellow'
         }
     },
@@ -133,7 +133,7 @@ gls.right = {
                 local b = vsc.get_git_branch()
                 return b ~= nil and b ~= ''
             end,
-            icon = '-',
+            icon = '',
             highlight = 'GruvboxRed'
         }
     },
