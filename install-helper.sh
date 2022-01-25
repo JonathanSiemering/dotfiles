@@ -28,6 +28,9 @@ dotfiles/install.sh
 # cdev
 #cat dotfiles/patches/cdev.txt >> ~/.profile
 
+# gpg tty
+#cat dotfiles/patches/gpg-tty.txt >> ~/.profile
+
 
 
 # +++ Windows +++
