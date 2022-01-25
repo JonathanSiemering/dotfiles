@@ -49,3 +49,4 @@ alias se='sudoedit'
 alias _='sudo '
 alias ..='cd ..'
 alias ~='cd ~'
+
