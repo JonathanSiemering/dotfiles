@@ -1,13 +1,20 @@
 local o = vim.o
-local compe = require('cmp')
+local cmp = require('cmp')
+local luasnip = require('luasnip')
 
 o.completeopt = "menuone,noselect"
 
-compe.setup{
+cmp.setup{
+    snippet = {
+        expand = function(args)
+            luasnip.lsp_expand(args.body)
+        end
+    },
     sources = {
         { name = 'nvim_lsp' },
         { name = 'buffer' },
         { name = 'path' },
-        { name = 'calc' }
+        { name = 'calc' },
+        { name = 'luasnip' }
     }
 }
