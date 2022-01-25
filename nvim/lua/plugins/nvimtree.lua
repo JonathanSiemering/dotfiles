@@ -2,7 +2,6 @@ local g = vim.g
 local tree = require('nvim-tree')
 local vars = require('utils.vars')
 
-g.nvim_tree_gitignore = 1
 g.nvim_tree_git_hl = 1
 
 tree.setup{
@@ -17,5 +16,8 @@ tree.setup{
     },
     view = {
         width = 30
+    },
+    git = {
+        ignore = true
     }
 }
