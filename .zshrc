@@ -49,3 +49,4 @@ export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=40%"
 
 # Load zsh-syntax-highlighting; should be last.
 source ~/.local/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
