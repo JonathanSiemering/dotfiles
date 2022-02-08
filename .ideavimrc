@@ -16,3 +16,6 @@ map <leader>v :action SplitVertically<CR>
 map <leader>V :action SplitHorizontally<CR>
 map <leader>e :action ShowErrorDescription<CR>
 map <leader>f :action FindInPath<CR>
+
+""" Handler
+sethandler a:vim
