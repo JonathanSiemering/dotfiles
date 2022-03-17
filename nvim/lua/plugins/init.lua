@@ -36,7 +36,7 @@ packer.startup(function(use)
     -- Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = {'TSUpdateSync'},
+        run = ':TSUpdate',
         config = function() require('plugins.treesitter') end
     }
 
