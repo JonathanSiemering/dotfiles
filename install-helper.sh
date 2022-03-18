@@ -31,6 +31,9 @@ dotfiles/install.sh
 # gpg tty
 #cat dotfiles/patches/gpg-tty.txt >> ~/.profile
 
+# ssh agent
+#cat dotfiles/patches/ssh-agent.txt >> ~/.profile
+
 
 
 # +++ Windows +++
