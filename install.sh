@@ -5,7 +5,7 @@ cd `dirname $0`
 script_dir=`pwd`
 
 # install packages
-if [ `command -v zsh | wc -l` -eq 0 ] ||
+if [ `command -v fish | wc -l` -eq 0 ] ||
    [ `command -v git | wc -l` -eq 0 ] ||
    [ `command -v curl | wc -l` -eq 0 ] ||
    [ `command -v vim | wc -l` -eq 0 ] ||
@@ -13,10 +13,10 @@ if [ `command -v zsh | wc -l` -eq 0 ] ||
     if [ `command -v apt | wc -l` -gt 0 ]; then
         # debian based
         sudo apt update
-        sudo apt -y install zsh git curl wget vim ripgrep make cmake gcc
+        sudo apt -y install fish git curl wget vim ripgrep make cmake gcc
     elif [ `command -v pacman | wc -l` -gt 0 ]; then
         # arch based
-        sudo pacman -S zsh git curl wget vim ripgrep make cmake gcc
+        sudo pacman -S fish git curl wget vim ripgrep make cmake gcc
     else
         echo "OS not supported"
         exit
@@ -27,7 +27,7 @@ fi
 mkdir -p ~/.config
 
 # set zsh as default shell
-chsh -s /bin/zsh
+chsh -s /bin/fish
 
 # install fzf
 fzf_dir=~/.fzf
@@ -63,7 +63,8 @@ cd $script_dir
 ln -s $script_dir/nvim ~/.config
 touch $script_dir/nvim/update
 
+ln -s $script_dir/fish ~/.config
+
 # insert or replace dotfiles
 cp -f .profile ~/
-cp -f .zshrc ~/
 cp -f .vimrc ~/
