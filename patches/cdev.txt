@@ -1,3 +1,0 @@
-
-# cdev alias
-alias cdev="cd \"\$(find ~/c/dev -maxdepth 3 -type d | fzf)\""
