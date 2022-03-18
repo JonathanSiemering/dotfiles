@@ -1,1 +1,1 @@
-set GPG_TTY $(tty)
+set GPG_TTY (tty)
