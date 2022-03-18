@@ -60,11 +60,11 @@ wget -O nvim.tar.gz https://github.com/neovim/neovim/releases/download/stable/nv
 tar xzf nvim.tar.gz
 cd $script_dir
 
-rm ~/.config/nvim
+rm -r ~/.config/nvim
 ln -s $script_dir/nvim ~/.config
 touch $script_dir/nvim/update
 
-rm ~/.config/fish
+rm -r ~/.config/fish
 ln -s $script_dir/fish ~/.config
 
 # insert or replace dotfiles
