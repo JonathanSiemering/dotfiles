@@ -2,6 +2,13 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Vi mode
+set fish_cursor_default block
+set fish_cursor_insert line
+set fish_cursor_replace_one line
+set fish_cursor_visual block
+
+# Prompt
 set fish_greeting
 set -g fish_prompt_pwd_dir_length 0
 
