@@ -19,7 +19,7 @@ function fish_prompt
 
     printf '%s%s%s' (set_color cyan) (echo $USER) (set_color normal)
     printf ' @ '
-    printf '%s%s%s' (set_color green) (hostname) (set_color normal)
+    printf '%s%s%s' (set_color green) (echo $hostname) (set_color normal)
     printf ' : '
     printf '%s%s%s' (set_color yellow) (prompt_pwd) (set_color normal)
 
