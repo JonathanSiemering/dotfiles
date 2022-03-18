@@ -1,3 +1,4 @@
+# Add for colemak
 function vi_key_bindings
     bind -s --preset -M default n up-line
     bind -s --preset -M default e down-line
