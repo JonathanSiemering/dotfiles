@@ -1,2 +1,5 @@
 nvim/update
 nvim/plugin
+
+fish/fish_variables
+fish/config.fish
