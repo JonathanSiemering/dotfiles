@@ -10,10 +10,25 @@ set fish_color_end red
 set fish_color_error ff4bef
 set fish_color_param 17a0e8
 
+function fish_mode_prompt
+
+end
+
 function fish_prompt
-        printf '\n%s%s%s @ %s%s%s : %s%s%s\n%s%s%s ' \
-        (set_color cyan) (echo $USER) (set_color normal) \
-        (set_color green) (hostname) (set_color normal) \
-        (set_color yellow) (prompt_pwd) (set_color normal) \
-        (set_color red) (echo ">") (set_color normal)
+    printf '\n'
+
+    printf '%s%s%s' (set_color cyan) (echo $USER) (set_color normal)
+    printf ' @ '
+    printf '%s%s%s' (set_color green) (hostname) (set_color normal)
+    printf ' : '
+    printf '%s%s%s' (set_color yellow) (prompt_pwd) (set_color normal)
+
+    printf '\n'
+
+    printf '%s%s%s' (set_color red) (echo ">") (set_color normal)
+    printf ' '
+end
+
+function fish_right_prompt
+    fish_git_prompt
 end
