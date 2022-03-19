@@ -27,7 +27,7 @@ fi
 mkdir -p ~/.config
 
 # set zsh as default shell
-chsh -s /bin/fish
+chsh -s /usr/bin/fish
 
 # install fzf
 fzf_dir=~/.fzf
