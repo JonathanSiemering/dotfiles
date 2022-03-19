@@ -10,6 +10,8 @@ set fish_color_end red
 set fish_color_error ff4bef
 set fish_color_param 17a0e8
 
+set __fish_git_prompt_show_informative_status auto
+
 function fish_mode_prompt
 
 end
