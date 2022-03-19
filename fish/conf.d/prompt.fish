@@ -29,6 +29,7 @@ function fish_prompt
     printf '%s%s%s' (set_color green) (echo $hostname) (set_color normal)
     printf ' : '
     printf '%s%s%s' (set_color yellow) (prompt_pwd) (set_color normal)
+    printf '%s%s%s' (set_color bc6221) (fish_git_prompt) (set_color normal)
 
     printf '\n'
 
@@ -37,5 +38,5 @@ function fish_prompt
 end
 
 function fish_right_prompt
-    fish_git_prompt
+
 end
