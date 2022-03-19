@@ -19,7 +19,7 @@ function fish_prompt
     set --local last_status $status
     if test $last_status -gt 0
         printf '%s%d%s' (set_color red) (echo $last_status) (set_color normal)
-        printf '\n\n'
+        printf '\n'
     end
 
     printf '\n'
