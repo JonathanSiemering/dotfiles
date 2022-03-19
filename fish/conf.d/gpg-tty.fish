@@ -1,1 +1,1 @@
-set GPG_TTY (tty)
+set -gx GPG_TTY (tty)
