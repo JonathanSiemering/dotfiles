@@ -1,3 +1,1 @@
-fish_add_path -a $HOME/bin
-fish_add_path -a $HOME/.local/bin
-fish_add_path -a $HOME/.nvim/nvim-linux64/bin
+set -gx PATH $PATH $HOME/bin $HOME/.local/bin $HOME/.nvim/nvim-linux64/bin
