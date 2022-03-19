@@ -20,9 +20,9 @@ function fish_prompt
     if test $last_status -gt 0
         printf '%s%d%s' (set_color red) (echo $last_status) (set_color normal)
         printf '\n\n'
-    else
-        printf '\n'
     end
+
+    printf '\n'
 
     printf '%s%s%s' (set_color cyan) (echo $USER) (set_color normal)
     printf ' @ '
