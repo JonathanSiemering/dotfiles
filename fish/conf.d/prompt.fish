@@ -1,4 +1,3 @@
-# Prompt
 set fish_greeting
 set -g fish_prompt_pwd_dir_length 0
 
@@ -17,7 +16,13 @@ function fish_mode_prompt
 end
 
 function fish_prompt
-    printf '\n'
+    set --local last_status $status
+    if test $last_status -gt 0
+        printf '%s%d%s' (set_color red) (echo $last_status) (set_color normal)
+        printf '\n\n'
+    else
+        printf '\n'
+    end
 
     printf '%s%s%s' (set_color cyan) (echo $USER) (set_color normal)
     printf ' @ '
