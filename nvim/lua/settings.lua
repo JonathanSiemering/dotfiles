@@ -24,14 +24,6 @@ vim.cmd([[
     nnoremap Y y$
 ]])
 
--- Undo break points
-vim.cmd([[
-    inoremap , ,<c-g>u
-    inoremap . .<c-g>u
-    inoremap ! !<c-g>u
-    ino emap ? ?<c-g>u
-]])
-
 -- Move text
 --vim.cmd([[
 --    nnoremap <c-n> :m .+1<cr>==
