@@ -33,6 +33,12 @@ packer.startup(function(use)
         config = function() require('plugins.gruvbox') end
     }
 
+    -- Notify
+    use {
+        'rcarriga/nvim-notify',
+        config = function() require('plugins.notify') end
+    }
+
     -- Treesitter
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -53,6 +59,11 @@ packer.startup(function(use)
     use {
         'neovim/nvim-lspconfig',
         config = function() require('plugins.lsp') end
+    }
+
+    use {
+        'williamboman/nvim-lsp-installer',
+        config = function() require('plugins.lspinstall') end
     }
 
     use {
