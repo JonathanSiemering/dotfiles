@@ -16,5 +16,6 @@ cmp.setup{
         { name = 'path' },
         { name = 'calc' },
         { name = 'luasnip' }
-    }
+    },
+    mapping = cmp.mapping.preset.insert(),
 }
