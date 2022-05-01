@@ -15,6 +15,8 @@ vim.cmd([[
     set undodir=~/.vim/undodir
     set undofile
     set autoread
+    set autowrite
+    set autowriteall
     set signcolumn=yes
     set completeopt=menuone,noinsert,noselect
     set laststatus=3
