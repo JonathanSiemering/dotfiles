@@ -17,6 +17,7 @@ vim.cmd([[
     set autoread
     set signcolumn=yes
     set completeopt=menuone,noinsert,noselect
+    set laststatus=3
 ]])
 
 -- Change Y to copy to end
