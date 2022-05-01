@@ -25,14 +25,14 @@ vim.cmd([[
 ]])
 
 -- Move text
---vim.cmd([[
---    nnoremap <c-n> :m .+1<cr>==
---    nnoremap <c-e> :m .-2<cr>==
---    inoremap <c-n> <esc>:m .+1<cr>==i
---    inoremap <c-e> <esc>:m .-2<cr>==i
---    vnoremap <c-n> :m '>+1<cr>gv=gv
---    vnoremap <c-e> :m '<-2<cr>gv=gv
---]])
+vim.cmd([[
+    nnoremap <c-j> :m .+1<cr>==
+    nnoremap <c-l> :m .-2<cr>==
+    inoremap <c-j> <esc>:m .+1<cr>==i
+    inoremap <c-l> <esc>:m .-2<cr>==i
+    vnoremap <c-j> :m '>+1<cr>gv=gv
+    vnoremap <c-l> :m '<-2<cr>gv=gv
+]])
 
 -- Menu
 vim.cmd([[
