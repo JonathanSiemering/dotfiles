@@ -23,7 +23,7 @@ wk.register({
         k = {"<cmd>lua vim.lsp.buf.signature_help()<cr>", "Show signature"},
         r = {"<cmd>lua vim.lsp.buf.rename()<cr>", "Function rename"},
     },
-    s = {
+    t = {
         name = 'Debug',
         c = {"<cmd>lua require('telescope').extensions.dap.commands{}<cr>", "Commands"},
         s = {"<cmd>lua require('telescope').extensions.dap.configurations{}<cr>", "Configurations"},
@@ -47,5 +47,6 @@ wk.register({
         d = {"<cmd>bdelete<cr>", "Delete"},
         n = {"<cmd>bn<cr>", "Next"},
         p = {"<cmd>bp<cr>", "Previus"}
-    }
+    },
+    s = {"<cmd>:wa<cr>", "Save all"}
 }, { prefix = '<leader>' })
