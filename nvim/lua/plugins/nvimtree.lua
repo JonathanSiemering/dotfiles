@@ -15,9 +15,16 @@ tree.setup{
         }
     },
     view = {
-        width = 30
+        width = 30,
+        number = true,
+        relativenumber = true
     },
     git = {
         ignore = true
+    },
+    actions = {
+        open_file = {
+            quit_on_open = true
+        }
     }
 }

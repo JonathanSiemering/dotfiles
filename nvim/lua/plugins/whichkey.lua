@@ -44,6 +44,8 @@ wk.register({
     },
     b = {
         name = 'Buffer',
-        d = {"<cmd>bdelete<cr>", "Delete"}
+        d = {"<cmd>bdelete<cr>", "Delete"},
+        n = {"<cmd>bn<cr>", "Next"},
+        p = {"<cmd>bp<cr>", "Previus"}
     }
 }, { prefix = '<leader>' })
