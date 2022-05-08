@@ -4,6 +4,5 @@ require('nvim-lsp-installer').setup({
         "gopls",
         "omnisharp",
         "sumneko_lua"
-    },
-    automatic_installation = true
+    }
 })
