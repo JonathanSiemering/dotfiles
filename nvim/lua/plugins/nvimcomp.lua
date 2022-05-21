@@ -17,5 +17,7 @@ cmp.setup{
         { name = 'calc' },
         { name = 'luasnip' }
     },
-    mapping = cmp.mapping.preset.insert(),
+    mapping = cmp.mapping.preset.insert({
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    }),
 }
