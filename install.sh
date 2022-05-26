@@ -5,22 +5,16 @@ cd `dirname $0`
 script_dir=`pwd`
 
 # install packages
-if [ `command -v fish | wc -l` -eq 0 ] ||
-   [ `command -v git | wc -l` -eq 0 ] ||
-   [ `command -v curl | wc -l` -eq 0 ] ||
-   [ `command -v vim | wc -l` -eq 0 ] ||
-   [ `command -v ripgrep | wc -l` -eq 0 ]; then
-    if [ `command -v apt | wc -l` -gt 0 ]; then
-        # debian based
-        sudo apt update
-        sudo apt -y install fish git curl wget vim ripgrep make cmake gcc
-    elif [ `command -v pacman | wc -l` -gt 0 ]; then
-        # arch based
-        sudo pacman -S fish git curl wget vim ripgrep make cmake gcc
-    else
-        echo "OS not supported"
-        exit
-    fi
+if [ `command -v apt | wc -l` -gt 0 ]; then
+    # debian based
+    sudo apt update
+    sudo apt -y install fish git curl wget vim ripgrep make cmake gcc
+elif [ `command -v pacman | wc -l` -gt 0 ]; then
+    # arch based
+    sudo pacman -S fish git curl wget vim ripgrep make cmake gcc
+else
+    echo "OS not supported"
+    exit
 fi
 
 #config
