@@ -2,8 +2,6 @@ local g = vim.g
 local tree = require('nvim-tree')
 local vars = require('utils.vars')
 
-g.nvim_tree_git_hl = 1
-
 tree.setup{
     diagnostics = {
         enable = true,
@@ -18,6 +16,9 @@ tree.setup{
         width = 30,
         number = true,
         relativenumber = true
+    },
+    renderer = {
+        highlight_git = true
     },
     git = {
         ignore = true
