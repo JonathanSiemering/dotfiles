@@ -8,10 +8,10 @@ script_dir=`pwd`
 if [ `command -v apt | wc -l` -gt 0 ]; then
     # debian based
     sudo apt update
-    sudo apt -y install fish git curl wget vim ripgrep make cmake gcc
+    sudo apt -y install fish git curl wget vim ripgrep make cmake gcc socat
 elif [ `command -v pacman | wc -l` -gt 0 ]; then
     # arch based
-    sudo pacman -S fish git curl wget vim ripgrep make cmake gcc
+    sudo pacman -S fish git curl wget vim ripgrep make cmake gcc socat
 else
     echo "OS not supported"
     exit
