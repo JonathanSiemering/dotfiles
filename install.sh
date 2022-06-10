@@ -12,6 +12,9 @@ if [ `command -v apt | wc -l` -gt 0 ]; then
 elif [ `command -v pacman | wc -l` -gt 0 ]; then
     # arch based
     sudo pacman -S fish git curl wget vim ripgrep make cmake gcc socat
+elif [ `command -v brew | wc -l` -gt 0 ]; then
+    # mac os
+    brew install fish git curl wget vim ripgrep make cmake gcc socat
 else
     echo "OS not supported"
     exit
