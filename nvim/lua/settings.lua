@@ -65,3 +65,4 @@ vim.cmd([[
     nnoremap <silent><leader>8 <cmd>BufferLineGoToBuffer 8<CR>
     nnoremap <silent><leader>9 <cmd>BufferLineGoToBuffer 9<CR>
 ]])
+
