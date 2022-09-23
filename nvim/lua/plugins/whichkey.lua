@@ -18,8 +18,6 @@ wk.register({
         p = {"<cmd>lua require('telescope.builtin').lsp_definitions()<cr>", "Function definitions"},
         i = {"<cmd>lua require('telescope.builtin').lsp_implementations()<cr>", "Function implementations"},
         d = {"<cmd>lua require('telescope.builtin').diagnostics()<cr>", "Diagnostics"},
-        --a = {"<cmd>lua require('telescope.builtin').lsp_code_actions()<cr>", "Code actions"},
-        --s = {"<cmd>lua require('telescope.builtin').lsp_range_code_actions<cr>", "Range code actions"},
         j = {"<cmd>lua vim.lsp.buf.hover()<cr>", "Show document"},
         k = {"<cmd>lua vim.lsp.buf.signature_help()<cr>", "Show signature"},
         r = {"<cmd>lua vim.lsp.buf.rename()<cr>", "Function rename"},
