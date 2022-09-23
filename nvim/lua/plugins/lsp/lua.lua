@@ -5,9 +5,6 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 lsp.sumneko_lua.setup{
-    cmd = {
-        os.getenv('HOME') .. "/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/lua-language-server"
-    },
     settings = {
         Lua = {
             runtime = {

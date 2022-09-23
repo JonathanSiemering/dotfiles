@@ -1,7 +1,6 @@
 -- Install packer
 local va = require('utils.vars')
 local fn = require('utils.fn')
-
 local repo = 'https://github.com/wbthomason/packer.nvim'
 local path = va.dataPath .. '/site/pack/packer/start/packer.nvim'
 
@@ -57,13 +56,20 @@ packer.startup(function(use)
 
     -- LSP --
     use {
-        'neovim/nvim-lspconfig',
-        config = function() require('plugins.lsp') end
+        'williamboman/mason.nvim',
+        config = function() require('plugins.mason') end
     }
 
     use {
-        'williamboman/nvim-lsp-installer',
-        config = function() require('plugins.lspinstall') end
+        'williamboman/mason-lspconfig.nvim',
+        after = 'mason.nvim',
+        config = function() require('plugins.mason-lspconfig') end
+    }
+
+    use {
+        'neovim/nvim-lspconfig',
+        after = 'mason-lspconfig.nvim',
+        config = function() require('plugins.lsp')  end
     }
 
     use {
@@ -90,6 +96,12 @@ packer.startup(function(use)
         'simrat39/symbols-outline.nvim',
         after = 'nvim-lspconfig',
         config = function() require('plugins.symbolsoutline') end
+    }
+
+    use {
+        'Maan2003/lsp_lines.nvim',
+        after = 'nvim-lspconfig',
+        config = function() require('plugins.lsplines') end
     }
     -- --
 
@@ -165,12 +177,6 @@ packer.startup(function(use)
 
     -- Comment helper
     use {'tpope/vim-commentary'}
-
-    -- Autopair --
-    use {'tpope/vim-endwise'}
-
-    use {'JonathanSiemering/vim-closer'}
-    -- --
 
     -- Whichkey
     use {
