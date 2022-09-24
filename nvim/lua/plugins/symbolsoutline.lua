@@ -1,4 +1,4 @@
-vim.g.symbols_outline = {
+require('symbols-outline').setup({
     highlight_hovered_item = true,
     show_guides = false,
     auto_preview = false,
@@ -7,4 +7,5 @@ vim.g.symbols_outline = {
     show_numbers = true,
     show_relative_numbers = true,
     show_symbol_details = false
-}
+})
+
