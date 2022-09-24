@@ -3,9 +3,6 @@ local cmp = require('cmp_nvim_lsp')
 
 local capabilities = cmp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-lsp.ccls.setup({
-    cmd = {
-        os.getenv('HOME') .. "/.local/share/nvim/lsp_servers/ccls/bin/ccls"
-    },
+lsp.clangd.setup({
     capabilities = capabilities
 })
