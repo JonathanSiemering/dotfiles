@@ -16,8 +16,8 @@ wk.register({
         s = {"<cmd>lua require('telescope.builtin').search_history()<cr>", "Search history"},
         t = {"<cmd>lua require('telescope.builtin').treesitter()<cr>", "Treesitter"},
     },
-    d = {
-        name = 'Diagnostics',
+    l = {
+        name = 'Lsp',
         f = {"<cmd>lua require('telescope.builtin').lsp_references()<cr>", "Function reference"},
         p = {"<cmd>lua require('telescope.builtin').lsp_definitions()<cr>", "Function definitions"},
         i = {"<cmd>lua require('telescope.builtin').lsp_implementations()<cr>", "Function implementations"},
@@ -27,7 +27,7 @@ wk.register({
         r = {"<cmd>lua vim.lsp.buf.rename()<cr>", "Function rename"},
         c = {"<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action"},
     },
-    t = {
+    u = {
         name = 'Debug',
         c = {"<cmd>lua require('telescope').extensions.dap.commands{}<cr>", "Commands"},
         s = {"<cmd>lua require('telescope').extensions.dap.configurations{}<cr>", "Configurations"},
@@ -48,5 +48,6 @@ wk.register({
         n = {"<cmd>bn<cr>", "Next"},
         p = {"<cmd>bp<cr>", "Previus"}
     },
+    d = {"\"_d", "Delete to void"},
     s = {"<cmd>:wa<cr>", "Save all"}
 }, { prefix = '<leader>' })

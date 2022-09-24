@@ -46,8 +46,8 @@ vim.cmd([[
 
 -- LuaSnip
 vim.cmd([[
-    imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
-    inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
+    inoremap <silent><leader><Tab> <cmd>lua require('luasnip').jump(1)<CR>
+    inoremap <silent><leader><S-Tab> <cmd>lua require'luasnip'.jump(-1)<CR>
 ]])
 
 -- Debug
@@ -70,6 +70,11 @@ vim.cmd([[
     nnoremap <silent><leader>7 <cmd>BufferLineGoToBuffer 7<CR>
     nnoremap <silent><leader>8 <cmd>BufferLineGoToBuffer 8<CR>
     nnoremap <silent><leader>9 <cmd>BufferLineGoToBuffer 9<CR>
+]])
+
+-- Past to void
+vim.cmd([[
+    xnoremap <leader>p "_dP
 ]])
 
 -- Highlight yanked
