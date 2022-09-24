@@ -1,3 +1,8 @@
 local lsp = require('lspconfig')
+local cmp = require('cmp_nvim_lsp')
 
-lsp.gopls.setup{}
+local capabilities = cmp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+lsp.gopls.setup{
+    capabilities = capabilities
+}
