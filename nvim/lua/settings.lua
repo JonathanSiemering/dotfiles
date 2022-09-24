@@ -72,3 +72,11 @@ vim.cmd([[
     nnoremap <silent><leader>9 <cmd>BufferLineGoToBuffer 9<CR>
 ]])
 
+-- Highlight yanked
+vim.cmd([[
+    augroup highlight_yank
+        autocmd!
+        au TextYankPost * silent! lua vim.highlight.on_yank({higroup="GruvboxBlueSign", timeout=600})
+    augroup END
+]])
+
