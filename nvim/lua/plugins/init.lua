@@ -73,16 +73,23 @@ packer.startup(function(use)
     }
 
     use {
+        'L3MON4D3/LuaSnip',
+        config = function() require('plugins.luasnip') end
+    }
+
+    use {
         'hrsh7th/nvim-cmp',
         requires = {
             {'hrsh7th/cmp-nvim-lsp'},
             {'hrsh7th/cmp-buffer'},
             {'hrsh7th/cmp-path'},
             {'hrsh7th/cmp-calc'},
-            {'L3MON4D3/LuaSnip'},
             {'saadparwaiz1/cmp_luasnip'}
         },
-        after = 'nvim-lspconfig',
+        after = {
+            'nvim-lspconfig',
+            'LuaSnip'
+        },
         config = function() require('plugins.nvimcomp') end
     }
 
