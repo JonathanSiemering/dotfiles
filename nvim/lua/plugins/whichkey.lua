@@ -11,6 +11,10 @@ wk.register({
         b = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffer"},
         h = {"<cmd>lua require('telescope.builtin').help_tags()<cr>", "In help"},
         r = {"<cmd>lua require('telescope.builtin').registers()<cr>", "Registers"},
+        m = {"<cmd>lua require('telescope.builtin').marks()<cr>", "Marks"},
+        q = {"<cmd>lua require('telescope.builtin').quickfix()<cr>", "Quickfix"},
+        s = {"<cmd>lua require('telescope.builtin').search_history()<cr>", "Search history"},
+        t = {"<cmd>lua require('telescope.builtin').treesitter()<cr>", "Treesitter"},
     },
     d = {
         name = 'Diagnostics',
@@ -21,6 +25,7 @@ wk.register({
         j = {"<cmd>lua vim.lsp.buf.hover()<cr>", "Show document"},
         k = {"<cmd>lua vim.lsp.buf.signature_help()<cr>", "Show signature"},
         r = {"<cmd>lua vim.lsp.buf.rename()<cr>", "Function rename"},
+        c = {"<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action"},
     },
     t = {
         name = 'Debug',
@@ -32,14 +37,9 @@ wk.register({
     },
     g = {
         name = 'Git',
-        b = {"<cmd>lua require('telescope.builtin').git_branches()<cr>", "Branches"},
-        s = {"<cmd>G<cr>", "Status"},
-        c = {"<cmd>Git commit<cr>", "Commit"},
-        p = {"<cmd>Git push<cr>", "Push"},
-        o = {"<cmd>Git pull<cr>", "Pull"},
-        d = {"<cmd>Git diff<cr>", "Diff"},
-        j = {"<cmd>diffget //3<cr>", "Merge use mine"},
-        f = {"<cmd>diffget //2<cr>", "Merge use theres"},
+        c = {"<cmd>lua require('telescope.builtin').git_commits()<cr>", "Commits"},
+        b = {"<cmd>lua require('telescope.builtin').git_bcommits()<cr>", "Commits of buffer"},
+        s = {"<cmd>lua require('telescope.builtin').git_status()<cr>", "Git status"},
     },
     b = {
         name = 'Buffer',
