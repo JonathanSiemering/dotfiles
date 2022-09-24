@@ -158,9 +158,7 @@ packer.startup(function(use)
     }
     -- --
 
-    -- Git --
-    use {'tpope/vim-fugitive'}
-
+    -- Git
     use {
         'lewis6991/gitsigns.nvim',
         requires = {
@@ -168,7 +166,6 @@ packer.startup(function(use)
         },
         config = function() require('plugins.gitsigns') end
     }
-    -- --
 
     -- Undo tree
     use {'mbbill/undotree'}
