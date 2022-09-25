@@ -1,6 +1,7 @@
--- Disable virtual_text since it's redundant due to lsp_lines.
+require('lsp_lines').setup()
+
+-- Enable when needed
 vim.diagnostic.config({
-  virtual_text = false,
+    virtual_lines = false,
 })
 
-require('lsp_lines').setup()

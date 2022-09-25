@@ -36,6 +36,13 @@ wk.register({
         v = {"<cmd>lua require('telescope').extensions.dap.variables{}<cr>", "Varibales"},
         f = {"<cmd>lua require('telescope').extensions.dap.frames{}<cr>", "Frames"},
     },
+    e = {
+        name = 'Error',
+        s = {"<cmd>lua vim.diagnostic.open_float()<cr>", "Show"},
+        n = {"<cmd>lua vim.diagnostic.goto_next()<cr>", "Next"},
+        e = {"<cmd>lua vim.diagnostic.goto_prev()<cr>", "Previus"},
+        l = {"<cmd>lua require('lsp_lines').toggle()<cr>", "Virtual lines"},
+    },
     g = {
         name = 'Git',
         c = {"<cmd>lua require('telescope.builtin').git_commits()<cr>", "Commits"},
@@ -53,3 +60,4 @@ wk.register({
     d = {"\"_d", "Delete to void"},
     s = {"<cmd>:wa<cr>", "Save all"}
 }, { prefix = '<leader>' })
+
