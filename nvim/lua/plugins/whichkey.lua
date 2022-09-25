@@ -3,7 +3,7 @@ local wk = require('which-key')
 wk.setup({})
 
 wk.register({
-    f = {
+    a = {
         name = 'Find',
         f = {"<cmd>lua require('telescope.builtin').find_files()<cr>", "File"},
         c = {"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "In current buffer"},
@@ -17,7 +17,7 @@ wk.register({
         t = {"<cmd>lua require('telescope.builtin').treesitter()<cr>", "Treesitter"},
         a = {"<cmd>NvimTreeFindFile<cr>", "File in NvimTree"},
     },
-    l = {
+    r = {
         name = 'Lsp',
         f = {"<cmd>lua require('telescope.builtin').lsp_references()<cr>", "Function reference"},
         p = {"<cmd>lua require('telescope.builtin').lsp_definitions()<cr>", "Function definitions"},
