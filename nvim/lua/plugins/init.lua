@@ -107,12 +107,6 @@ packer.startup(function(use)
         after = 'nvim-lspconfig',
         config = function() require('plugins.symbolsoutline') end
     }
-
-    use {
-        'Maan2003/lsp_lines.nvim',
-        after = 'nvim-lspconfig',
-        config = function() require('plugins.lsplines') end
-    }
     -- --
 
     -- DAP --

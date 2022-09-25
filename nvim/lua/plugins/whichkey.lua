@@ -23,10 +23,13 @@ wk.register({
         p = {"<cmd>lua require('telescope.builtin').lsp_definitions()<cr>", "Function definitions"},
         i = {"<cmd>lua require('telescope.builtin').lsp_implementations()<cr>", "Function implementations"},
         d = {"<cmd>lua require('telescope.builtin').diagnostics()<cr>", "Diagnostics"},
-        j = {"<cmd>lua vim.lsp.buf.hover()<cr>", "Show document"},
+        h = {"<cmd>lua vim.lsp.buf.hover()<cr>", "Show document"},
         k = {"<cmd>lua vim.lsp.buf.signature_help()<cr>", "Show signature"},
         r = {"<cmd>lua vim.lsp.buf.rename()<cr>", "Function rename"},
         c = {"<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action"},
+        n = {"<cmd>lua vim.diagnostic.goto_next()<cr>", "Next"},
+        e = {"<cmd>lua vim.diagnostic.goto_prev()<cr>", "Previus"},
+        s = {"<cmd>lua vim.diagnostic.open_float()<cr>", "Show"},
     },
     u = {
         name = 'Debug',
@@ -35,13 +38,6 @@ wk.register({
         b = {"<cmd>lua require('telescope').extensions.dap.list_breakpoints{}<cr>", "List breakpoints"},
         v = {"<cmd>lua require('telescope').extensions.dap.variables{}<cr>", "Varibales"},
         f = {"<cmd>lua require('telescope').extensions.dap.frames{}<cr>", "Frames"},
-    },
-    e = {
-        name = 'Error',
-        s = {"<cmd>lua vim.diagnostic.open_float()<cr>", "Show"},
-        n = {"<cmd>lua vim.diagnostic.goto_next()<cr>", "Next"},
-        e = {"<cmd>lua vim.diagnostic.goto_prev()<cr>", "Previus"},
-        l = {"<cmd>lua require('lsp_lines').toggle()<cr>", "Virtual lines"},
     },
     g = {
         name = 'Git',
