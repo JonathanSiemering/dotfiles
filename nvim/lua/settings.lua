@@ -18,8 +18,8 @@ vim.cmd([[
     set autowrite
     set autowriteall
     set signcolumn=yes
-    set completeopt=menuone,noinsert,noselect
     set laststatus=3
+    set fillchars+=vert:\|
 ]])
 
 -- Change Y to copy to end
