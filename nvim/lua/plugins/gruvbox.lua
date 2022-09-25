@@ -21,10 +21,10 @@ vim.cmd([[
     highlight link DapStopped GruvboxAqua
     highlight DapStoppedLineHl guibg=#303030
 
-    highlight DiagnosticVirtualTextError guifg=#ef342b guibg=#1e0000
-    highlight DiagnosticVirtualTextWarn guifg=#e0d208 guibg=#1e1c02
-    highlight DiagnosticVirtualTextInfo guifg=#15a7d3 guibg=#011728
-    highlight DiagnosticVirtualTextHint guifg=#15a7d3 guibg=#011728
+    highlight DiagnosticVirtualTextError guifg=#ef342b guibg=#383838
+    highlight DiagnosticVirtualTextWarn guifg=#e0d208 guibg=#383838
+    highlight DiagnosticVirtualTextInfo guifg=#15a7d3 guibg=#383838
+    highlight DiagnosticVirtualTextHint guifg=#15a7d3 guibg=#383838
 ]])
 
     -- highlight link DiagnosticFloatingError GruvboxRedSign
