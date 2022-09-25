@@ -42,7 +42,7 @@ wk.register({
         b = {"<cmd>lua require('telescope.builtin').git_bcommits()<cr>", "Commits of buffer"},
         s = {"<cmd>lua require('telescope.builtin').git_status()<cr>", "Git status"},
         t = {"<cmd>Gitsigns blame_line<cr>", "Git blame line"},
-        l = {"<cmd>lua Lazygit_toggle()<cr>", "Lazygit"},
+        l = {"<cmd>:wa<cr> <cmd>lua Lazygit_toggle()<cr>", "Lazygit"},
     },
     b = {
         name = 'Buffer',
