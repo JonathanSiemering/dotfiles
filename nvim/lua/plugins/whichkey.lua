@@ -1,4 +1,7 @@
+local o = vim.o
 local wk = require('which-key')
+
+o.timeoutlen = 200
 
 wk.setup({})
 
