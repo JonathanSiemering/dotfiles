@@ -191,6 +191,12 @@ packer.startup(function(use)
         config = function() require('plugins.whichkey') end
     }
 
+    -- Toggleterm
+    use {
+        'akinsho/toggleterm.nvim',
+        config = function() require('plugins.toggleterm') end
+    }
+
 end)
 
 -- Auto sync packages when file update exists
