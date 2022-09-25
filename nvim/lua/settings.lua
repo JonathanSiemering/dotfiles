@@ -44,12 +44,6 @@ vim.cmd([[
     nnoremap <F4> <cmd>SymbolsOutline<CR>
 ]])
 
--- LuaSnip
-vim.cmd([[
-    inoremap <silent><leader><Tab> <cmd>lua require('luasnip').jump(1)<CR>
-    inoremap <silent><leader><S-Tab> <cmd>lua require'luasnip'.jump(-1)<CR>
-]])
-
 -- Debug
 vim.cmd([[
     nnoremap <F5> <cmd>lua require("dapui").open() require('dap').continue()<CR>
