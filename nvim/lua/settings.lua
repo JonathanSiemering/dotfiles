@@ -49,7 +49,7 @@ vim.cmd([[
     nnoremap <F5> <cmd>lua require("dapui").open() require('dap').continue()<CR>
     nnoremap <F6> <cmd>lua require('dap').step_over()<CR>
     nnoremap <F7> <cmd>lua require('dap').step_into()<CR>
-    nnoremap <F8> <cmd>lua require('dap').close() require('dapui').close()<CR>
+    nnoremap <F8> <cmd>lua require('dap').close() require('dapui').close() require('nvim-dap-virtual-text').refresh()<CR>
     nnoremap <F9> <cmd>lua require('dap').toggle_breakpoint()<CR>
 ]])
 
