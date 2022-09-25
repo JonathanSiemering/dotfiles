@@ -4,7 +4,7 @@ wk.setup({})
 
 wk.register({
     f = {
-        name = 'Finder',
+        name = 'Find',
         f = {"<cmd>lua require('telescope.builtin').find_files()<cr>", "File"},
         c = {"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "In current buffer"},
         g = {"<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep"},
@@ -15,6 +15,7 @@ wk.register({
         q = {"<cmd>lua require('telescope.builtin').quickfix()<cr>", "Quickfix"},
         s = {"<cmd>lua require('telescope.builtin').search_history()<cr>", "Search history"},
         t = {"<cmd>lua require('telescope.builtin').treesitter()<cr>", "Treesitter"},
+        a = {"<cmd>NvimTreeFindFile<cr>", "File in NvimTree"},
     },
     l = {
         name = 'Lsp',
