@@ -6,6 +6,7 @@ bufferline.setup{
         show_close_icon = false,
         show_buffer_close_icons = false,
         separator_style = 'thick',
+        numbers = 'ordinal',
         diagnostics = 'nvim_lsp',
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
             local s = ""
