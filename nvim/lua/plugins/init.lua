@@ -174,10 +174,6 @@ packer.startup(function(use)
         config = function() require('plugins.nvimtree') end
     }
 
-    -- Auto pairs
-    use {'tpope/vim-endwise'}
-    use {'rstacruz/vim-closer'}
-
     -- Variable illuminate
     use {'RRethy/vim-illuminate'}
 
