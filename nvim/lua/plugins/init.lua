@@ -23,9 +23,6 @@ packer.startup(function(use)
     -- Packer itself
     use {'wbthomason/packer.nvim'}
 
-    -- Filetypes
-    use ('nathom/filetype.nvim')
-
     -- Gruvbox colorscheme
     use {
         'gruvbox-community/gruvbox',
