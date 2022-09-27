@@ -26,13 +26,14 @@ wk.register({
         p = {"<cmd>lua require('telescope.builtin').lsp_definitions()<cr>", "Function definitions"},
         i = {"<cmd>lua require('telescope.builtin').lsp_implementations()<cr>", "Function implementations"},
         d = {"<cmd>lua require('telescope.builtin').diagnostics()<cr>", "Diagnostics"},
+        t = {"<cmd>lua require('telescope.builtin').diagnostics({bufnr = 0})<cr>", "Diagnostics buffer"},
         h = {"<cmd>lua vim.lsp.buf.hover()<cr>", "Show document"},
         k = {"<cmd>lua vim.lsp.buf.signature_help()<cr>", "Show signature"},
         r = {"<cmd>lua vim.lsp.buf.rename()<cr>", "Function rename"},
         c = {"<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action"},
-        n = {"<cmd>lua vim.diagnostic.goto_next()<cr>", "Next"},
-        e = {"<cmd>lua vim.diagnostic.goto_prev()<cr>", "Previus"},
-        s = {"<cmd>lua vim.diagnostic.open_float()<cr>", "Show"},
+        n = {"<cmd>lua vim.diagnostic.goto_next()<cr>", "Next diagnostic"},
+        e = {"<cmd>lua vim.diagnostic.goto_prev()<cr>", "Previus diagnostic"},
+        s = {"<cmd>lua vim.diagnostic.open_float()<cr>", "Show diagnostic"},
     },
     u = {
         name = 'Debug',
@@ -57,6 +58,7 @@ wk.register({
         p = {"<cmd>bp<cr>", "Previus"}
     },
     d = {"\"_d", "Delete to void"},
-    s = {"<cmd>:wa<cr>", "Save all"}
+    n = {"<cmd>:Telescope notify<cr>", "Notifications"},
+    s = {"<cmd>:wa<cr>", "Save all"},
 }, { prefix = '<leader>' })
 

@@ -32,9 +32,19 @@ packer.startup(function(use)
         config = function() require('plugins.gruvbox') end
     }
 
+    -- Telescope
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {
+            {'nvim-lua/popup.nvim'},
+            {'nvim-lua/plenary.nvim'}
+        }
+    }
+
     -- Notify
     use {
         'rcarriga/nvim-notify',
+        after = 'telescope.nvim',
         config = function() require('plugins.notify') end
     }
 
@@ -43,15 +53,6 @@ packer.startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         config = function() require('plugins.treesitter') end
-    }
-
-    -- Telescope
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = {
-            {'nvim-lua/popup.nvim'},
-            {'nvim-lua/plenary.nvim'}
-        }
     }
 
     -- LSP --

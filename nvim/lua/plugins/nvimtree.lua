@@ -13,7 +13,7 @@ tree.setup{
         }
     },
     view = {
-        width = 30,
+        width = 50,
         number = true,
         relativenumber = true
     },
