@@ -6,7 +6,8 @@ dapui.setup({
             position = "right",
             size = 60,
             elements = {
-                "stacks",
+                "scopes",
+                {id = "stacks", size = 0.15},
                 {id = "breakpoints", size = 0.15},
                 {id = "watches", size = 0.15},
             },
