@@ -7,5 +7,6 @@ lsp.omnisharp.setup{
     cmd = {
         os.getenv('HOME') .. "/.local/share/nvim/mason/packages/omnisharp/omnisharp",
     },
-    capabilities = capabilities
+    enable_editorconfig_support = true,
+    capabilities = capabilities,
 }
