@@ -23,7 +23,7 @@ fi
 #config
 mkdir -p ~/.config
 
-# set zsh as default shell
+# set fish as default shell
 chsh -s /usr/bin/fish
 
 # install fzf
@@ -50,8 +50,10 @@ rm -r ~/.config/nvim
 ln -s $script_dir/nvim ~/.config
 touch $script_dir/nvim/update
 
+# fish config
 rm -r ~/.config/fish
 ln -s $script_dir/fish ~/.config
 
 # insert or replace dotfiles
 cp -f .vimrc ~/
+cp -f .tmux.conf ~/
