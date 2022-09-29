@@ -9,7 +9,7 @@ vim.cmd([[
     set expandtab
     set scrolloff=8
     set incsearch
-    set hidden
+    set nohidden
     set noswapfile
     set nobackup
     set undodir=~/.vim/undodir
