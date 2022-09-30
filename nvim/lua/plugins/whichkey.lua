@@ -47,6 +47,7 @@ wk.register({
         e = {"<cmd>lua require('telescope').extensions.dap.list_breakpoints{}<cr>", "List breakpoints"},
         i = {"<cmd>lua require('telescope').extensions.dap.variables{}<cr>", "Varibales"},
         o = {"<cmd>lua require('telescope').extensions.dap.frames{}<cr>", "Frames"},
+        m = {"<cmd>lua require('dapui').eval() require('dapui').eval()<cr>", "Variable eval"},
 
         -- Git
         a = {"<cmd>:wa<cr> <cmd>lua Lazygit_toggle()<cr>", "Lazygit"},
