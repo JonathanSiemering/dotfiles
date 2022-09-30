@@ -7,16 +7,16 @@ wk.setup({})
 
 wk.register({
     -- Find
-    a = {"<cmd>lua require('telescope.builtin').find_files()<cr>", "File"},
+    a = {"<cmd>lua require('telescope.builtin').find_files()<cr>", "Find File"},
     r = {"<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep"},
-    s = {"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "In current buffer"},
-    t = {"<cmd>NvimTreeFindFile<cr>", "File in NvimTree"},
+    s = {"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "In current buffer search"},
+    t = {"<cmd>NvimTreeFindFile<cr>", "Find file in NvimTree"},
 
-    q = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffer"},
-    w = {"<cmd>lua require('telescope.builtin').treesitter()<cr>", "Treesitter"},
-    f = {"<cmd>lua require('telescope.builtin').registers()<cr>", "Registers"},
+    q = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "Find Buffer"},
+    w = {"<cmd>lua require('telescope.builtin').treesitter()<cr>", "Treesitter search"},
+    f = {"<cmd>lua require('telescope.builtin').registers()<cr>", "Registers search"},
     -- p = paste void
-    g = {"<cmd>lua require('telescope.builtin').quickfix()<cr>", "Quickfix"},
+    g = {"<cmd>lua require('telescope.builtin').quickfix()<cr>", "Quickfix search"},
 
     -- Lsp
     h = {"<cmd>lua vim.diagnostic.open_float()<cr>", "Show diagnostic"},
@@ -34,24 +34,24 @@ wk.register({
     m = {"<cmd>lua require('telescope.builtin').diagnostics({bufnr = 0})<cr>", "Diagnostics buffer"},
 
     -- Buffer
-    x = {"<cmd>bdelete<cr>", "Delete"},
-    c = {"<cmd>bp<cr>", "Previus"},
-    v = {"<cmd>bn<cr>", "Next"},
+    x = {"<cmd>bdelete<cr>", "Delete buffer"},
+    c = {"<cmd>bp<cr>", "Previus buffer"},
+    v = {"<cmd>bn<cr>", "Next buffer"},
 
     -- Layer 2
     z = {
         -- Dap
         name = "layer 2",
-        h = {"<cmd>lua require('telescope').extensions.dap.commands{}<cr>", "Commands"},
-        n = {"<cmd>lua require('telescope').extensions.dap.configurations{}<cr>", "Configurations"},
-        e = {"<cmd>lua require('telescope').extensions.dap.list_breakpoints{}<cr>", "List breakpoints"},
-        i = {"<cmd>lua require('telescope').extensions.dap.variables{}<cr>", "Varibales"},
-        o = {"<cmd>lua require('telescope').extensions.dap.frames{}<cr>", "Frames"},
-        m = {"<cmd>lua require('dapui').eval() require('dapui').eval()<cr>", "Variable eval"},
+        h = {"<cmd>lua require('telescope').extensions.dap.commands{}<cr>", "DAP Commands"},
+        n = {"<cmd>lua require('telescope').extensions.dap.configurations{}<cr>", "DAP Configurations"},
+        e = {"<cmd>lua require('telescope').extensions.dap.list_breakpoints{}<cr>", "DAP Breakpoints"},
+        i = {"<cmd>lua require('telescope').extensions.dap.variables{}<cr>", "DAP Varibales"},
+        o = {"<cmd>lua require('telescope').extensions.dap.frames{}<cr>", "DAP Frames"},
+        m = {"<cmd>lua require('dapui').eval() require('dapui').eval()<cr>", "DAP Variable eval"}, -- To calls to jump to window
 
         -- Git
         a = {"<cmd>:wa<cr> <cmd>lua Lazygit_toggle()<cr>", "Lazygit"},
-        r = {"<cmd>lua require('telescope.builtin').git_commits()<cr>", "Commits"},
+        r = {"<cmd>lua require('telescope.builtin').git_commits()<cr>", "Git Commits"},
         s = {"<cmd>lua require('telescope.builtin').git_bcommits()<cr>", "Commits of buffer"},
         t = {"<cmd>lua require('telescope.builtin').git_status()<cr>", "Git status"},
         d = {"<cmd>Gitsigns blame_line<cr>", "Git blame line"},
