@@ -9,23 +9,36 @@ tree.setup{
             hint = vars.lspHintIcon,
             info = vars.lspInfoIcon,
             warning = vars.lspWarningIcon,
-            error = vars.lspErrorIcon
-        }
+            error = vars.lspErrorIcon,
+        },
     },
     view = {
         width = 50,
         number = true,
-        relativenumber = true
+        relativenumber = true,
     },
     renderer = {
-        highlight_git = true
+        highlight_git = true,
+        icons = {
+            glyphs = {
+                git = {
+                    unstaged = vars.gitFileUnstaged,
+                    staged = vars.gitFileStaged,
+                    unmerged = vars.gitFileUnmerged,
+                    renamed = vars.gitFileRenamed,
+                    untracked = vars.gitFileUntracked,
+                    deleted = vars.gitFileDeleted,
+                    ignored= vars.gitFileIgnored,
+                },
+            },
+        },
     },
     git = {
-        ignore = true
+        ignore = true,
     },
     actions = {
         open_file = {
-            quit_on_open = true
-        }
-    }
+            quit_on_open = true,
+        },
+    },
 }
