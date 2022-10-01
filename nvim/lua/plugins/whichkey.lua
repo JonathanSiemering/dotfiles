@@ -34,8 +34,8 @@ wk.register({
     m = {"<cmd>lua require('telescope.builtin').diagnostics({bufnr = 0})<cr>", "Diagnostics buffer"},
 
     -- Harpoon
-    x = {"<cmd>lua require('harpoon.ui').add_file()<cr>", "Add file to harpoon"},
-    c = {"<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Harpoon menu"},
+    x = {"<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Harpoon menu"},
+    c = {"<cmd>lua require('harpoon.mark').add_file()<cr>", "Add file to harpoon"},
     v = {"<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Harpoon prev file"},
     b = {"<cmd>lua require('harpoon.ui').nav_next()<cr>", "Harpoon next file"},
 
