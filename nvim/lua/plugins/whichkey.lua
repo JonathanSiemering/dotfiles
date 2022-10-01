@@ -33,10 +33,11 @@ wk.register({
     k = {"<cmd>lua require('telescope.builtin').diagnostics()<cr>", "Diagnostics"},
     m = {"<cmd>lua require('telescope.builtin').diagnostics({bufnr = 0})<cr>", "Diagnostics buffer"},
 
-    -- Buffer
-    x = {"<cmd>bdelete<cr>", "Delete buffer"},
-    c = {"<cmd>bp<cr>", "Previus buffer"},
-    v = {"<cmd>bn<cr>", "Next buffer"},
+    -- Harpoon
+    x = {"<cmd>lua require('harpoon.ui').add_file()<cr>", "Add file to harpoon"},
+    c = {"<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Harpoon menu"},
+    v = {"<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Harpoon prev file"},
+    b = {"<cmd>lua require('harpoon.ui').nav_next()<cr>", "Harpoon next file"},
 
     -- Layer 2
     z = {
@@ -58,6 +59,11 @@ wk.register({
 
         -- Notify
         x = {"<cmd>:Telescope notify<cr>", "Notifications"},
+
+        -- Buffer
+        q = {"<cmd>bdelete<cr>", "Delete buffer"},
+        w = {"<cmd>bp<cr>", "Previus buffer"},
+        f = {"<cmd>bn<cr>", "Next buffer"},
     },
     d = {"\"_d", "Delete to void"},
 }, { prefix = '<leader>' })
@@ -93,17 +99,30 @@ vim.cmd([[
     nnoremap <F9> <cmd>lua require('dap').toggle_breakpoint()<CR>
 ]])
 
+-- Harpoon
+vim.cmd([[
+    nnoremap <silent><leader>1 <cmd>lua require('harpoon.ui').nav_file(1)<CR>
+    nnoremap <silent><leader>2 <cmd>lua require('harpoon.ui').nav_file(2)<CR>
+    nnoremap <silent><leader>3 <cmd>lua require('harpoon.ui').nav_file(3)<CR>
+    nnoremap <silent><leader>4 <cmd>lua require('harpoon.ui').nav_file(4)<CR>
+    nnoremap <silent><leader>5 <cmd>lua require('harpoon.ui').nav_file(5)<CR>
+    nnoremap <silent><leader>6 <cmd>lua require('harpoon.ui').nav_file(6)<CR>
+    nnoremap <silent><leader>7 <cmd>lua require('harpoon.ui').nav_file(7)<CR>
+    nnoremap <silent><leader>8 <cmd>lua require('harpoon.ui').nav_file(8)<CR>
+    nnoremap <silent><leader>9 <cmd>lua require('harpoon.ui').nav_file(9)<CR>
+]])
+
 -- Buffer
 vim.cmd([[
-    nnoremap <silent><leader>1 <cmd>BufferLineGoToBuffer 1<CR>
-    nnoremap <silent><leader>2 <cmd>BufferLineGoToBuffer 2<CR>
-    nnoremap <silent><leader>3 <cmd>BufferLineGoToBuffer 3<CR>
-    nnoremap <silent><leader>4 <cmd>BufferLineGoToBuffer 4<CR>
-    nnoremap <silent><leader>5 <cmd>BufferLineGoToBuffer 5<CR>
-    nnoremap <silent><leader>6 <cmd>BufferLineGoToBuffer 6<CR>
-    nnoremap <silent><leader>7 <cmd>BufferLineGoToBuffer 7<CR>
-    nnoremap <silent><leader>8 <cmd>BufferLineGoToBuffer 8<CR>
-    nnoremap <silent><leader>9 <cmd>BufferLineGoToBuffer 9<CR>
+    nnoremap <silent><leader>z1 <cmd>BufferLineGoToBuffer 1<CR>
+    nnoremap <silent><leader>z2 <cmd>BufferLineGoToBuffer 2<CR>
+    nnoremap <silent><leader>z3 <cmd>BufferLineGoToBuffer 3<CR>
+    nnoremap <silent><leader>z4 <cmd>BufferLineGoToBuffer 4<CR>
+    nnoremap <silent><leader>z5 <cmd>BufferLineGoToBuffer 5<CR>
+    nnoremap <silent><leader>z6 <cmd>BufferLineGoToBuffer 6<CR>
+    nnoremap <silent><leader>z7 <cmd>BufferLineGoToBuffer 7<CR>
+    nnoremap <silent><leader>z8 <cmd>BufferLineGoToBuffer 8<CR>
+    nnoremap <silent><leader>z9 <cmd>BufferLineGoToBuffer 9<CR>
 ]])
 
 -- Save

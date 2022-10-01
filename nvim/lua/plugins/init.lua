@@ -191,6 +191,16 @@ packer.startup(function(use)
 
     -- Editorconf
     use {'gpanders/editorconfig.nvim'}
+
+    -- Harpoon
+    use {
+        'ThePrimeagen/harpoon',
+        requires = {
+            {'nvim-lua/plenary.nvim'}
+        },
+        after = 'telescope.nvim',
+        config = function() require('plugins.harpoon') end
+    }
 end)
 
 -- Auto sync packages when file update exists
