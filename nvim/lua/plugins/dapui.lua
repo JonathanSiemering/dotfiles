@@ -21,5 +21,8 @@ dapui.setup({
             },
         },
     },
+    controls = {
+        enable = false,
+    },
 })
 
