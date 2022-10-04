@@ -1,5 +1,6 @@
 vim.cmd([[
     set termguicolors
+    set mouse=
     set number
     set relativenumber
     set nohlsearch
