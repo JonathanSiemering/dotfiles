@@ -85,7 +85,7 @@ vim.cmd([[
 
 -- Menu
 vim.cmd([[
-    nnoremap <F2> <cmd>NvimTreeToggle<CR>
+    nnoremap <F2> <cmd>:wa<CR><cmd>NvimTreeToggle<CR>
     nnoremap <F3> <cmd>UndotreeToggle<CR>
     nnoremap <F4> <cmd>SymbolsOutline<CR>
 ]])
