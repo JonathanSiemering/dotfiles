@@ -6,16 +6,14 @@ set clipboard=ideaput
 set scrolloff=8
 
 """ Mapping
-let mapleader=","
-map <leader>d :action GotoDeclaration<CR>
-map <leader>D :action GotoUsage<CR>
-map <leader>s :action SurroundWith<CR>
+let mapleader=" "
+map <leader>a :action GotoDeclaration<CR>
+map <leader>r :action GotoUsage<CR>
 map <leader>c :action CommentByLineComment<CR>
 map <leader>C :action CommentByBlockComment<CR>
 map <leader>v :action SplitVertically<CR>
-map <leader>V :action SplitHorizontally<CR>
-map <leader>e :action ShowErrorDescription<CR>
-map <leader>f :action FindInPath<CR>
+map <leader>s :action SplitHorizontally<CR>
+map <leader>h :action ShowErrorDescription<CR>
 
 """ Handler
 sethandler a:vim
