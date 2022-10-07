@@ -6,14 +6,6 @@ local fi = require('galaxyline/provider_fileinfo')
 local gls = gl.section
 local seperator = '|'
 
-vim.cmd([[
-    highlight GalaxylineAqua guifg=#427b58
-    highlight GalaxylineBlue guifg=#83a598
-    highlight GalaxylineYellow guifg=#fabd2f
-    highlight GalaxylineRed guifg=#cc241d
-    highlight GalaxylineGreen guifg=#98971a
-]])
-
 gls.left = {
     {
         FileIcon = {
