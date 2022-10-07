@@ -27,7 +27,7 @@ vim.cmd([[
 vim.cmd([[
     augroup highlight_yank
         autocmd!
-        au TextYankPost * silent! lua vim.highlight.on_yank({higroup="GruvboxBlueSign", timeout=600})
+        au TextYankPost * silent! lua vim.highlight.on_yank({higroup="@text.literal.markdown_inline", timeout=600})
     augroup END
 ]])
 
