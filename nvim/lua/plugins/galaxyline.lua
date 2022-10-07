@@ -6,46 +6,54 @@ local fi = require('galaxyline/provider_fileinfo')
 local gls = gl.section
 local seperator = '|'
 
+vim.cmd([[
+    highlight GalaxylineAqua guifg=#427b58
+    highlight GalaxylineBlue guifg=#83a598
+    highlight GalaxylineYellow guifg=#fabd2f
+    highlight GalaxylineRed guifg=#cc241d
+    highlight GalaxylineGreen guifg=#98971a
+]])
+
 gls.left = {
     {
         FileIcon = {
             provider = 'FileIcon',
-            highlight = 'GruvboxAqua'
+            highlight = 'GalaxylineAqua'
         }
     },
     {
         FileName = {
             provider = 'FileName',
             separator = seperator .. ' ',
-            highlight = 'GruvboxBlue'
+            highlight = 'GalaxylineBlue'
         }
     },
     {
         FileTypeName = {
             provider = 'FileTypeName',
             separator = ' ' .. seperator .. ' ',
-            highlight = 'GruvboxYellow'
+            highlight = 'GalaxylineYellow'
         }
     },
     {
         FileFormat = {
             provider = 'FileFormat',
             separator = ' ' .. seperator,
-            highlight = 'GruvboxBlue'
+            highlight = 'GalaxylineBlue'
         }
     },
     {
         FileEncode = {
             provider = 'FileEncode',
             separator = ' ' .. seperator .. ' ',
-            highlight = 'GruvboxYellow'
+            highlight = 'GalaxylineYellow'
         }
     },
     {
         FileSize = {
             provider = 'FileSize',
             separator = seperator .. ' ',
-            highlight = 'GruvboxBlue'
+            highlight = 'GalaxylineBlue'
         }
     },
     {
@@ -53,7 +61,7 @@ gls.left = {
             provider = {function()
                 return vim.fn.line('.') .. ':' .. vim.fn.col('.') .. ' ' .. fi.current_line_percent():gsub('%s+', '')
             end},
-            highlight = 'GruvboxYellow'
+            highlight = 'GalaxylineYellow'
         }
     }
 }
@@ -63,34 +71,34 @@ gls.right = {
         DiagnosticError = {
             provider = 'DiagnosticError',
             icon = vars.lspErrorIcon,
-            highlight = 'GruvboxRed'
+            highlight = 'GalaxylineRed'
         }
     },
     {
         DiagnosticWarn = {
             provider = 'DiagnosticWarn',
             icon = vars.lspWarningIcon,
-            highlight = 'GruvboxYellow'
+            highlight = 'GalaxylineYellow'
         }
     },
     {
         DiagnosticHint = {
             provider = 'DiagnosticHint',
             icon = vars.lspHintIcon,
-            highlight = 'GruvboxBlue'
+            highlight = 'GalaxylineBlue'
         }
     },
     {
         DiagnosticInfo = {
             provider = 'DiagnosticInfo',
             icon = vars.lspInfoIcon,
-            highlight = 'GruvboxBlue'
+            highlight = 'GalaxylineBlue'
         }
     },
     {
         LspClient = {
             provider = 'GetLspClient',
-            highlight = 'GruvboxAqua'
+            highlight = 'GalaxylineAqua'
         }
     },
     {
@@ -105,7 +113,7 @@ gls.right = {
                 return b ~= nil and b ~= ''
             end,
             icon = vars.gitAddIcon,
-            highlight = 'GruvboxGreen',
+            highlight = 'GalaxylineGreen',
             separator = ' ' .. seperator .. ' '
         }
     },
@@ -121,7 +129,7 @@ gls.right = {
                 return b ~= nil and b ~= ''
             end,
             icon = vars.gitModifiedIcon,
-            highlight = 'GruvboxYellow'
+            highlight = 'GalaxylineYellow'
         }
     },
     {
@@ -136,14 +144,14 @@ gls.right = {
                 return b ~= nil and b ~= ''
             end,
             icon = vars.gitRemoveIcon,
-            highlight = 'GruvboxRed'
+            highlight = 'GalaxylineRed'
         }
     },
     {
         GitBranch = {
             provider = 'GitBranch',
             icon = '',
-            highlight = 'GruvboxAqua'
+            highlight = 'GalaxylineAqua'
         }
     }
 }

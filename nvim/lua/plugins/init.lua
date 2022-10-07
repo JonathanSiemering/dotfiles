@@ -23,10 +23,10 @@ packer.startup(function(use)
     -- Packer itself
     use {'wbthomason/packer.nvim'}
 
-    -- Gruvbox colorscheme
+    -- Tokionight colorscheme
     use {
-        'gruvbox-community/gruvbox',
-        config = function() require('plugins.gruvbox') end
+        'folke/tokyonight.nvim',
+        config = function() require('plugins.tokionight') end
     }
 
     -- Telescope
