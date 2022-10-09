@@ -15,4 +15,4 @@ require('plugins.lsp.cpp')
 require('plugins.lsp.lua')
 require('plugins.lsp.tsserver')
 require('plugins.lsp.angularls')
-
+require('plugins.lsp.bashls')
