@@ -1,8 +1,4 @@
-require('nightfox').setup({
-    style = {
-        comments = 'italic',
-    },
-})
+require('nightfox').setup({})
 
 vim.cmd([[
     colorscheme carbonfox
