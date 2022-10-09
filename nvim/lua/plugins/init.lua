@@ -23,10 +23,10 @@ packer.startup(function(use)
     -- Packer itself
     use {'wbthomason/packer.nvim'}
 
-    -- Tokionight colorscheme
+    -- Theme
     use {
-        'folke/tokyonight.nvim',
-        config = function() require('plugins.tokionight') end
+        'EdenEast/nightfox.nvim',
+        config = function() require('plugins.nightfox') end
     }
 
     -- Telescope
