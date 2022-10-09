@@ -201,6 +201,12 @@ packer.startup(function(use)
         after = 'telescope.nvim',
         config = function() require('plugins.harpoon') end
     }
+
+    -- Autopairs
+    use {
+        'windwp/nvim-autopairs',
+        config = function() require('plugins.autopairs') end
+    }
 end)
 
 -- Auto sync packages when file update exists
