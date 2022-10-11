@@ -23,10 +23,10 @@ packer.startup(function(use)
     -- Packer itself
     use {'wbthomason/packer.nvim'}
 
-    -- Theme
+    -- Gruvbox colorscheme
     use {
-        'EdenEast/nightfox.nvim',
-        config = function() require('plugins.nightfox') end
+        'gruvbox-community/gruvbox',
+        config = function() require('plugins.gruvbox') end
     }
 
     -- Telescope
