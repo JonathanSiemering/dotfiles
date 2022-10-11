@@ -10,7 +10,7 @@ wk.register({
     a = {"<cmd>lua require('telescope.builtin').find_files()<cr>", "Find File"},
     r = {"<cmd>lua require('telescope.builtin').live_grep()<cr>", "Grep"},
     s = {"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "In current buffer search"},
-    t = {"<cmd>NvimTreeFindFile<cr>", "Find file in NvimTree"},
+    t = {"<cmd>:wa<cr><cmd>NvimTreeFindFile<cr>", "Find file in NvimTree"},
 
     q = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "Find Buffer"},
     w = {"<cmd>lua require('telescope.builtin').treesitter()<cr>", "Treesitter search"},
