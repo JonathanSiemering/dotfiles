@@ -5,7 +5,7 @@ g.gruvbox_contrast_dark = 'hard'
 vim.cmd([[
     colorscheme gruvbox
 
-    highlight clear SignColum
+    highlight clear SignColumn
     highlight GruvboxAquaSign guibg=none
     highlight GruvboxGreenSign guibg=none
     highlight GruvboxOrangeSign guibg=none
