@@ -58,8 +58,6 @@ rm -r ~/.config/fish
 ln -s $script_dir/fish ~/.config
 
 # insert or replace dotfiles
-cp -f .profile ~/
-cp -f .zshrc ~/
 cp -f .vimrc ~/
 cp -f .tmux.conf ~/
 
