@@ -8,17 +8,13 @@ script_dir=`pwd`
 if [ -x `command -v apt` ]; then
     # debian based
     sudo apt update
-    sudo apt -y install zsh git curl wget vim ripgrep make cmake gcc socat
-
-    [ -x `command -v fish` ] && sudo apt remove fish
+    sudo apt -y install fish git curl wget vim ripgrep make cmake gcc socat
 elif [ -x `command -v pacman` ]; then
     # arch based
-    sudo pacman -S zsh git curl wget vim ripgrep make cmake gcc socat
-
-    [ -x `command -v fish` ] && sudo pacman -R fish
+    sudo pacman -S fish git curl wget vim ripgrep make cmake gcc socat
 elif [ -x `command -v brew` ]; then
     # mac os
-    brew install zsh git curl wget vim ripgrep make cmake gcc socat
+    brew install fish git curl wget vim ripgrep make cmake gcc socat
 else
     echo "OS not supported"
     exit
@@ -28,7 +24,7 @@ fi
 mkdir -p ~/.config
 
 # set fish as default shell
-chsh -s /usr/bin/zsh
+chsh -s /usr/bin/fish
 
 # mkdir .local
 mkdir ~/.local
@@ -57,13 +53,14 @@ rm -r ~/.config/nvim
 ln -s $script_dir/nvim ~/.config
 touch $script_dir/nvim/update
 
+# fish config
+rm -r ~/.config/fish
+ln -s $script_dir/fish ~/.config
+
 # insert or replace dotfiles
-cp -f .profile ~/
-cp -f .zshrc ~/
 cp -f .vimrc ~/
 cp -f .tmux.conf ~/
 
 # remove deprecated 
 [ -d ~/.nvim ] && rm -rf ~/.nvim
 [ -d ~/.fzf ] && rm -rf ~/.fzf
-[ -d ~/.config/fish ] && rm -rf ~/.config/fish
