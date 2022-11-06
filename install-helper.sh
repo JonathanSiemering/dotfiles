@@ -8,14 +8,3 @@ git pull
 cd ..
 
 dotfiles/install.sh
-
-
-
-# +++ Windows +++
-
-# .ideavimrc for jetbrain vim emulator
-#cp -f dotfiles/.ideavimrc ~/c/.ideavimrc
-
-# .XCompose for wincompose
-#cp -f dotfiles/.XCompose ~/c/.XCompose
-
