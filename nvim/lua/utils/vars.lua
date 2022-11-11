@@ -1,8 +1,8 @@
 local M = {}
 
 function M:init()
-    self.nvimPath = vim.fn.stdpath('config')
-    self.dataPath = vim.fn.stdpath('data')
+    self.nvimPath = string.gsub(vim.fn.stdpath('config'), '\\', '/')
+    self.dataPath = string.gsub(vim.fn.stdpath('data'), '\\', '/')
 
     self.lspErrorIcon = ''
     self.lspWarningIcon = ''

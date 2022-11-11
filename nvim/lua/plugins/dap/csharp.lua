@@ -1,8 +1,9 @@
+local vars = require("utils.vars")
 local dap = require('dap')
 
 dap.adapters.netcoredbg = {
     type = 'executable',
-    command = os.getenv('HOME') .. '/.local/share/nvim/mason/packages/netcoredbg/netcoredbg',
+    command = vars.dataPath .. '/mason/packages/netcoredbg/netcoredbg',
     args = {'--interpreter=vscode'}
 }
 
