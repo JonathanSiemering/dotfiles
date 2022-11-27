@@ -1,3 +1,5 @@
+$originalPath = pwd
+cd $PSScriptRoot
 $ScriptDir = pwd
 
 # Ripgrep
@@ -58,3 +60,5 @@ cp -r $ScriptDir\nvim\* .
 
 "" > update
 cd $ScriptDir
+
+cd $originalPath
