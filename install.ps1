@@ -12,6 +12,7 @@ if (Test-Path -Path ripgrep) {
 }
 wget -O ripgrep.zip https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-pc-windows-msvc.zip
 Expand-Archive -DestinationPath ripgrep ripgrep.zip
+mv ripgrep/ripgrep-13.0.0-x86_64-pc-windows-msvc ripgrep/ripgrep
 rm ripgrep.zip
 cd $ScriptDir
 
