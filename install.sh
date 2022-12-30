@@ -8,13 +8,13 @@ script_dir=`pwd`
 if [ -x `command -v apt` ]; then
     # debian based
     sudo apt update
-    sudo apt -y install zsh git curl wget vim ripgrep make cmake gcc socat
+    sudo apt -y install zsh git curl wget vim ripgrep make cmake gcc socat bat tmux
 elif [ -x `command -v pacman` ]; then
     # arch based
-    sudo pacman -S zsh git curl wget vim ripgrep make cmake gcc socat
+    sudo pacman -S zsh git curl wget vim ripgrep make cmake gcc socat bat tmux
 elif [ -x `command -v brew` ]; then
     # mac os
-    brew install zsh git curl wget vim ripgrep make cmake gcc socat
+    brew install zsh git curl wget vim ripgrep make cmake gcc socat bat tmux nvim
 else
     echo "OS not supported"
     exit
