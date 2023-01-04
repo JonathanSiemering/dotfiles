@@ -7,8 +7,8 @@ set scrolloff=8
 
 """ Mapping
 let mapleader=" "
-map <leader>a :action GotoDeclaration<CR>
-map <leader>r :action GotoUsage<CR>
+map <leader>n :action GotoDeclaration<CR>
+map <leader>e :action GotoUsage<CR>
 map <leader>c :action CommentByLineComment<CR>
 map <leader>C :action CommentByBlockComment<CR>
 map <leader>v :action SplitVertically<CR>
