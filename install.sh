@@ -10,7 +10,7 @@ case $DOTFILES_OS in
         sudo apt update
         sudo apt -y install zsh git curl wget vim ripgrep make cmake gcc socat bat tmux
 
-        scripts/config.sh
+        scripts/configs.sh
         scripts/download-neovim.sh
         scripts/fzf.sh
         ;;
@@ -18,7 +18,7 @@ case $DOTFILES_OS in
     "arch")
         sudo pacman -S zsh git curl wget vim ripgrep make cmake gcc socat bat tmux
 
-        scripts/config.sh
+        scripts/configs.sh
         scripts/download-neovim.sh
         scripts/fzf.sh
         ;;
@@ -26,7 +26,7 @@ case $DOTFILES_OS in
     "macos")
         brew install zsh git curl wget vim ripgrep make cmake gcc socat bat tmux nvim
 
-        scripts/config.sh
+        scripts/configs.sh
         scripts/fzf.sh
         ;;
 
