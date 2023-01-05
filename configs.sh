@@ -1,5 +1,7 @@
 #!/bin/sh
 
+script_dir=`pwd`
+
 #config
 mkdir -p ~/.config
 
@@ -28,7 +30,7 @@ ln -s $script_dir/.vimrc ~/.vimrc
 [ -f ~/.tmux.conf ] && rm -r ~/.tmux.conf
 ln -s $script_dir/.tmux.conf ~/.tmux.conf
 
-# remove deprecated 
+# remove deprecated
 [ -d ~/.config/fish ] && rm -rf ~/.config/fish
 [ -d ~/.nvim ] && rm -rf ~/.nvim
 [ -d ~/.fzf ] && rm -rf ~/.fzf
