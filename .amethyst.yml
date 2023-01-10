@@ -1,0 +1,13 @@
+layouts:
+  - tall
+  - wide
+  - fullscreen
+  - column
+  - 3column-middle
+  - 4column-left
+  - bsp
+floating:
+  - com.apple.calculator
+  - com.apple.systempreferences
+  - com.microsoft.rdc.macos
+window-resize-step: 2
