@@ -11,3 +11,21 @@ floating:
   - com.apple.systempreferences
   - com.microsoft.rdc.macos
 window-resize-step: 2
+shrink-main:
+  mod: mod1
+  key: h
+expand-main:
+  mod: mod1
+  key: u
+focus-ccw:
+  mod: mod1
+  key: n
+focus-cw:
+  mod: mod1
+  key: y
+swap-ccw:
+  mod: mod2
+  key: n
+swap-cw:
+  mod: mod2
+  key: y
