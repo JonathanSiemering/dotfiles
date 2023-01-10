@@ -25,6 +25,9 @@ case $DOTFILES_OS in
         brew install zsh git curl wget vim ripgrep make cmake gcc socat bat tmux nvim
 
         scripts/fzf.sh
+
+        [ -f ~/.amethyst.yml ] && rm -r ~/.amethyst.yml
+        ln -s $script_dir/.amethyst.yml ~/.amethyst.yml
         ;;
 
     *)
