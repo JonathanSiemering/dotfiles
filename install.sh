@@ -26,8 +26,13 @@ case $DOTFILES_OS in
 
         scripts/fzf.sh
 
+        # amethyst
         [ -f ~/.amethyst.yml ] && rm -r ~/.amethyst.yml
         ln -s $script_dir/.amethyst.yml ~/.amethyst.yml
+
+        # kitty
+        [ -f ~/.config/kitty ] && rm -r ~/.config/kitty
+        ln -s $script_dir/kitty ~/.config/kitty
         ;;
 
     *)
