@@ -3,8 +3,7 @@ layouts:
   - wide
   - fullscreen
   - column
-  - 3column-middle
-  - 4column-left
+  - middle-wide
   - bsp
 floating:
   - com.apple.calculator
