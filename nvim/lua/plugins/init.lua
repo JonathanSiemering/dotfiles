@@ -189,9 +189,6 @@ packer.startup(function(use)
         config = function() require('plugins.toggleterm') end
     }
 
-    -- Editorconf
-    use {'gpanders/editorconfig.nvim'}
-
     -- Harpoon
     use {
         'ThePrimeagen/harpoon',
