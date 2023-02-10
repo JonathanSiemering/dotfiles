@@ -61,6 +61,8 @@ alias s='sudo '
 alias ..='cd ..'
 alias ~='cd ~'
 
+alias lg='lazygit'
+
 # wsl2 ssh agent
 if [[ "$SSH_AGENT" = "wsl2" ]]; then
     export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
