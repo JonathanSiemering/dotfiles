@@ -3,18 +3,12 @@ local cmp = require('cmp_nvim_lsp')
 
 local capabilities = cmp.default_capabilities()
 
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-
-lsp.sumneko_lua.setup{
+lsp.lua_ls.setup {
     settings = {
         Lua = {
             runtime = {
                 -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
                 version = 'LuaJIT',
-                -- Setup your lua path
-                path = runtime_path,
             },
             diagnostics = {
                 -- Get the language server to recognize the `vim` global
@@ -28,7 +22,7 @@ lsp.sumneko_lua.setup{
             telemetry = {
                 enable = false,
             },
-        }
+        },
     },
-    capabilities = capabilities
+    capabilities = capabilities,
 }
