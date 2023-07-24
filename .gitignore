@@ -4,3 +4,5 @@ nvim/plugin
 fish/fish_variables
 fish/config.fish
 fish/functions/fzf_key_bindings.fish
+
+nvim/lua/.luarc.json
