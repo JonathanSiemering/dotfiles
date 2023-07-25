@@ -1,5 +1,7 @@
 vim.cmd([[
     set termguicolors
+    set cursorline
+    set cursorcolumn
     set mouse=
     set number
     set relativenumber
