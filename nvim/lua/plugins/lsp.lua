@@ -61,7 +61,11 @@ return {
                         enable_editorconfig_support = true,
                         enable_roslyn_analyzers = true,
                         enable_import_completion = true,
-                        root_dir = lspconfig.util.root_pattern('*.sln') or lspconfig.util.root_pattern('*.csproj')
+                        root_dir = function(fname)
+                            local sln = lspconfig.util.root_pattern('*.sln')(fname)
+                            local csproj = lspconfig.util.root_pattern('*.csproj')(fname)
+                            return sln or csproj
+                        end
                     }
                 end
 
