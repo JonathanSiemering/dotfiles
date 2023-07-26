@@ -56,10 +56,12 @@ return {
                 end,
 
                 ['omnisharp'] = function()
-                    require('lspconfig')['omnisharp'].setup {
+                    local lspconfig = require('lspconfig')
+                    lspconfig['omnisharp'].setup {
                         enable_editorconfig_support = true,
                         enable_roslyn_analyzers = true,
                         enable_import_completion = true,
+                        root_dir = lspconfig.util.root_pattern('*.sln') or lspconfig.util.root_pattern('*.csproj')
                     }
                 end
 
