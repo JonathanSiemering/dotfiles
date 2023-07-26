@@ -53,7 +53,17 @@ return {
                     require('lspconfig')['eslint'].setup {
                         filetypes = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx', 'vue', 'svelte', 'astro', 'html' }
                     }
+                end,
+
+                ['omnisharp'] = function()
+                    require('lspconfig')['omnisharp'].setup {
+                        enable_editorconfig_support = true,
+                        enable_roslyn_analyzers = true,
+                        enable_import_completion = true,
+                        capabilities = capabilities,
+                    }
                 end
+
             }
         end
     },
