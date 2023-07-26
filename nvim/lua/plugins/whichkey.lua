@@ -102,30 +102,30 @@ return {
             nnoremap <F9> <cmd>lua require('dap').toggle_breakpoint()<CR>
         ]])
 
-        -- Harpoon
-        vim.cmd([[
-            nnoremap <silent><leader>1 <cmd>lua require('harpoon.ui').nav_file(1)<CR>
-            nnoremap <silent><leader>2 <cmd>lua require('harpoon.ui').nav_file(2)<CR>
-            nnoremap <silent><leader>3 <cmd>lua require('harpoon.ui').nav_file(3)<CR>
-            nnoremap <silent><leader>4 <cmd>lua require('harpoon.ui').nav_file(4)<CR>
-            nnoremap <silent><leader>5 <cmd>lua require('harpoon.ui').nav_file(5)<CR>
-            nnoremap <silent><leader>6 <cmd>lua require('harpoon.ui').nav_file(6)<CR>
-            nnoremap <silent><leader>7 <cmd>lua require('harpoon.ui').nav_file(7)<CR>
-            nnoremap <silent><leader>8 <cmd>lua require('harpoon.ui').nav_file(8)<CR>
-            nnoremap <silent><leader>9 <cmd>lua require('harpoon.ui').nav_file(9)<CR>
-        ]])
-
         -- Buffer
         vim.cmd([[
-            nnoremap <silent><leader>z1 <cmd>BufferLineGoToBuffer 1<CR>
-            nnoremap <silent><leader>z2 <cmd>BufferLineGoToBuffer 2<CR>
-            nnoremap <silent><leader>z3 <cmd>BufferLineGoToBuffer 3<CR>
-            nnoremap <silent><leader>z4 <cmd>BufferLineGoToBuffer 4<CR>
-            nnoremap <silent><leader>z5 <cmd>BufferLineGoToBuffer 5<CR>
-            nnoremap <silent><leader>z6 <cmd>BufferLineGoToBuffer 6<CR>
-            nnoremap <silent><leader>z7 <cmd>BufferLineGoToBuffer 7<CR>
-            nnoremap <silent><leader>z8 <cmd>BufferLineGoToBuffer 8<CR>
-            nnoremap <silent><leader>z9 <cmd>BufferLineGoToBuffer 9<CR>
+            nnoremap <silent><leader>1 <cmd>BufferLineGoToBuffer 1<CR>
+            nnoremap <silent><leader>2 <cmd>BufferLineGoToBuffer 2<CR>
+            nnoremap <silent><leader>3 <cmd>BufferLineGoToBuffer 3<CR>
+            nnoremap <silent><leader>4 <cmd>BufferLineGoToBuffer 4<CR>
+            nnoremap <silent><leader>5 <cmd>BufferLineGoToBuffer 5<CR>
+            nnoremap <silent><leader>6 <cmd>BufferLineGoToBuffer 6<CR>
+            nnoremap <silent><leader>7 <cmd>BufferLineGoToBuffer 7<CR>
+            nnoremap <silent><leader>8 <cmd>BufferLineGoToBuffer 8<CR>
+            nnoremap <silent><leader>9 <cmd>BufferLineGoToBuffer 9<CR>
+        ]])
+
+        -- Harpoon
+        vim.cmd([[
+            nnoremap <silent><leader>z1 <cmd>lua require('harpoon.ui').nav_file(1)<CR>
+            nnoremap <silent><leader>z2 <cmd>lua require('harpoon.ui').nav_file(2)<CR>
+            nnoremap <silent><leader>z3 <cmd>lua require('harpoon.ui').nav_file(3)<CR>
+            nnoremap <silent><leader>z4 <cmd>lua require('harpoon.ui').nav_file(4)<CR>
+            nnoremap <silent><leader>z5 <cmd>lua require('harpoon.ui').nav_file(5)<CR>
+            nnoremap <silent><leader>z6 <cmd>lua require('harpoon.ui').nav_file(6)<CR>
+            nnoremap <silent><leader>z7 <cmd>lua require('harpoon.ui').nav_file(7)<CR>
+            nnoremap <silent><leader>z8 <cmd>lua require('harpoon.ui').nav_file(8)<CR>
+            nnoremap <silent><leader>z9 <cmd>lua require('harpoon.ui').nav_file(9)<CR>
         ]])
 
         -- Save
