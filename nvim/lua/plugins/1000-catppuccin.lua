@@ -37,6 +37,12 @@
                 GalaxylineYellow = { fg = '#fabd2f' },
                 GalaxylineRed = { fg = '#cc241d' },
                 GalaxylineGreen = { fg = '#98971a' },
+
+                DapBreakPoint = { fg = '#B02020' },
+                DapLogPoint = { fg = '#B02020' },
+                DapBreakPointRejected = { fg = '#B02020' },
+                DapStopped = { fg = '#202090' },
+                DapStoppedLineHl = { bg = '#303030' },
             },
             integrations = {
                 cmp = true,
