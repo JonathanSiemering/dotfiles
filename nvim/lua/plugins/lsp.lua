@@ -20,55 +20,15 @@ return {
             mason_lspconfig.setup()
             mason_lspconfig.setup_handlers {
 
+                -- default
                 function (server_name)
                     require('lspconfig')[server_name].setup {}
                 end,
 
-                ['lua_ls'] = function()
-                    require('lspconfig')['lua_ls'].setup {
-                        settings = {
-                            Lua = {
-                                runtime = {
-                                    -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                                    version = 'LuaJIT',
-                                },
-                                diagnostics = {
-                                    -- Get the language server to recognize the `vim` global
-                                    globals = {'vim'},
-                                },
-                                workspace = {
-                                    -- Make the server aware of Neovim runtime files
-                                    library = vim.api.nvim_get_runtime_file("", true),
-                                },
-                                -- Do not send telemetry data containing a randomized but unique identifier
-                                telemetry = {
-                                    enable = false,
-                                },
-                            },
-                        },
-                    }
-                end,
-
-                ['eslint'] = function()
-                    require('lspconfig')['eslint'].setup {
-                        filetypes = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx', 'vue', 'svelte', 'astro', 'html' }
-                    }
-                end,
-
-                ['omnisharp'] = function()
-                    local lspconfig = require('lspconfig')
-                    lspconfig['omnisharp'].setup {
-                        enable_editorconfig_support = true,
-                        enable_roslyn_analyzers = true,
-                        enable_import_completion = true,
-                        root_dir = function(fname)
-                            local sln = lspconfig.util.root_pattern('*.sln')(fname)
-                            local csproj = lspconfig.util.root_pattern('*.csproj')(fname)
-                            return sln or csproj
-                        end
-                    }
-                end
-
+                -- overrides
+                ['lua_ls'] = function() require('lsp.lua-ls') end,
+                ['eslint'] = function() require('lsp.eslint') end,
+                ['omnisharp'] = function() require('lsp.omnisharp') end
             }
         end
     },
