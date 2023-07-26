@@ -63,6 +63,9 @@ alias ~='cd ~'
 
 alias lg='lazygit'
 
+alias cddotfiles='cd ~/.dotfiles/dotfiles'
+alias cdnvim='cd ~/.dotfiles/dotfiles/nvim'
+
 # wsl2 ssh agent
 if [[ "$SSH_AGENT" = "wsl2" ]]; then
     export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
