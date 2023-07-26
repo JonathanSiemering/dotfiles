@@ -60,7 +60,6 @@ return {
                         enable_editorconfig_support = true,
                         enable_roslyn_analyzers = true,
                         enable_import_completion = true,
-                        capabilities = capabilities,
                     }
                 end
 
