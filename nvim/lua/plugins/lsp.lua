@@ -1,9 +1,9 @@
 return {
+
+    -- LSP config
     {
         'williamboman/mason-lspconfig.nvim',
-        dependencies = {
-            'neovim/nvim-lspconfig',
-        },
+        dependencies = {'neovim/nvim-lspconfig'},
         config = function()
             local mason = require('mason')
             local mason_lspconfig = require('mason-lspconfig')
@@ -19,11 +19,13 @@ return {
 
             mason_lspconfig.setup()
             mason_lspconfig.setup_handlers {
+
                 function (server_name)
-                    require("lspconfig")[server_name].setup {}
+                    require('lspconfig')[server_name].setup {}
                 end,
+
                 ['lua_ls'] = function()
-                    require("lspconfig")['lua_ls'].setup {
+                    require('lspconfig')['lua_ls'].setup {
                         settings = {
                             Lua = {
                                 runtime = {
@@ -45,11 +47,18 @@ return {
                             },
                         },
                     }
+                end,
+
+                ['eslint'] = function()
+                    require('lspconfig')['eslint'].setup {
+                        filetypes = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx', 'vue', 'svelte', 'astro', 'html' }
+                    }
                 end
             }
         end
     },
 
+    -- Snippets
     {
         'L3MON4D3/LuaSnip',
         dependencies = {'rafamadriz/friendly-snippets'},
@@ -58,6 +67,7 @@ return {
         end
     },
 
+    -- Completion
     {
         'hrsh7th/nvim-cmp',
         version = false, -- last release is way too old
@@ -95,6 +105,7 @@ return {
         end
     },
 
+    -- Signature
     {
         'ray-x/lsp_signature.nvim',
         config = function()
@@ -106,6 +117,7 @@ return {
         end
     },
 
+    -- Symbols Outline
     {
         'simrat39/symbols-outline.nvim',
         config = function()
@@ -121,4 +133,5 @@ return {
             })
         end
     },
+
 }
