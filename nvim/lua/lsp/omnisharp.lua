@@ -11,3 +11,19 @@ lspconfig['omnisharp'].setup {
         return sln or csproj
     end
 }
+
+-- Project specific config
+-- https://github.com/OmniSharp/omnisharp-roslyn/wiki/Configuration-Options
+--
+-- Example:
+-- omnisharp.json:
+-- {
+--   "fileOptions": {
+--     "systemExcludeSearchPatterns": [
+--       "**/node_modules/**/*",
+--       "**/bin/**/*",
+--       "**/obj/**/*"
+--     ],
+--     "excludeSearchPatterns": []
+--   }
+-- }
