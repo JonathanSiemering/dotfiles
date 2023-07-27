@@ -1,5 +1,6 @@
 return {
 
+    -- Dap
     {
         'mfussenegger/nvim-dap',
         config = function()
@@ -9,13 +10,14 @@ return {
             vim.fn.sign_define('DapLogPoint', {text = '', texthl = 'DapLogPoint', linehl = '', numhl = ''})
             vim.fn.sign_define('DapStopped', {text = '', texthl = 'DapStopped', linehl = 'DapStoppedLineHl', numhl = ''})
             vim.fn.sign_define('DapBreakpointRejected', {text = '', texthl = 'DapBreakpointRejected', linehl = '', numhl = ''})
-            
+
             -- Load languages
             require('dap.go')
             require('dap.csharp')
         end
     },
 
+    -- Dap UI
     {
         'rcarriga/nvim-dap-ui',
         dependencies = {'mfussenegger/nvim-dap'},
@@ -48,6 +50,7 @@ return {
         end
     },
 
+    -- DAP virtual text
     {
         'theHamsta/nvim-dap-virtual-text',
         dependencies = {'mfussenegger/nvim-dap'},
@@ -58,6 +61,7 @@ return {
         end
     },
 
+    -- Telescope DAP
     {
         'nvim-telescope/telescope-dap.nvim',
         dependencies = {
