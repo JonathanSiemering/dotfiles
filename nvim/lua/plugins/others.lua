@@ -25,4 +25,10 @@ return {
     -- Indent Blanktline
     {'lukas-reineke/indent-blankline.nvim'},
 
+    -- LSP lens
+    {
+        'VidocqH/lsp-lens.nvim',
+        config = function() require('lsp-lens').setup({}) end
+    },
+
 }
