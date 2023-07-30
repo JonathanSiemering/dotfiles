@@ -15,9 +15,9 @@ return {
             s = {"<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>", "In current buffer search"},
             t = {"<cmd>:wa<cr><cmd>NvimTreeFindFile<cr>", "Find file in NvimTree"},
 
-            q = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "Find Buffer"},
-            w = {"<cmd>lua require('telescope.builtin').treesitter()<cr>", "Treesitter search"},
-            f = {"<cmd>lua require('telescope.builtin').registers()<cr>", "Registers search"},
+            q = {"<cmd>bdelete<cr>", "Delete buffer"},
+            w = {"<cmd>bp<cr>", "Previus buffer"},
+            f = {"<cmd>bn<cr>", "Next buffer"},
             -- p = paste void
             g = {"<cmd>lua require('telescope.builtin').quickfix()<cr>", "Quickfix search"},
 
@@ -42,6 +42,8 @@ return {
             v = {"<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Harpoon prev file"},
             b = {"<cmd>lua require('harpoon.ui').nav_next()<cr>", "Harpoon next file"},
 
+            d = {"\"_d", "Delete to void"},
+
             -- Layer 2
             z = {
                 -- Dap
@@ -64,11 +66,10 @@ return {
                 x = {"<cmd>:Telescope notify<cr>", "Notifications"},
 
                 -- Buffer
-                q = {"<cmd>bdelete<cr>", "Delete buffer"},
-                w = {"<cmd>bp<cr>", "Previus buffer"},
-                f = {"<cmd>bn<cr>", "Next buffer"},
+                q = {"<cmd>lua require('telescope.builtin').buffers()<cr>", "Find Buffer"},
+                w = {"<cmd>lua require('telescope.builtin').treesitter()<cr>", "Treesitter search"},
+                f = {"<cmd>lua require('telescope.builtin').registers()<cr>", "Registers search"},
             },
-            d = {"\"_d", "Delete to void"},
         }, { prefix = '<leader>' })
 
         -- Change Y to copy to end
