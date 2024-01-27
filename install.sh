@@ -47,6 +47,11 @@ chsh -s /bin/zsh
 # mkdir .local
 mkdir ~/.local
 
+# install zsh plugins
+$script_dir/scripts/fzf.sh
+$script_dir/scripts/zsh-syntax-highlighting.sh
+$script_dir/scripts/spaceship.sh
+
 # nvim config
 [ -d ~/.config/nvim ] && rm -r ~/.config/nvim
 ln -s $script_dir/nvim ~/.config
