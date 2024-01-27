@@ -66,6 +66,8 @@ alias lg='lazygit'
 alias cddotfiles='cd ~/.dotfiles/dotfiles'
 alias cdnvim='cd ~/.dotfiles/dotfiles/nvim'
 
+alias kube-switch='kubectl config use-context $(kubectl config get-contexts --output='name' | fzf)'
+
 # wsl2 ssh agent
 if [[ "$SSH_AGENT" = "wsl2" ]]; then
     export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
