@@ -51,5 +51,12 @@ export FZF_DEFAULT_OPTS="--layout=reverse --inline-info --height=40%"
 source ~/.local/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Spaceship
+SPACESHIP_PROMPT_ORDER=(
+    user
+    host
+    dir
+    exit_code
+    git
+)
 [ -f ~/.local/spaceship/spaceship.zsh ] && source ~/.local/spaceship/spaceship.zsh
 

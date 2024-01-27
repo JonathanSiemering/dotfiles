@@ -12,6 +12,8 @@ case $DOTFILES_OS in
 
         scripts/download-neovim.sh
         scripts/fzf.sh
+        scripts/zsh-syntax-highlighting.sh
+        scripts/spaceship.sh
         ;;
 
     "arch")
@@ -19,12 +21,16 @@ case $DOTFILES_OS in
 
         scripts/download-neovim.sh
         scripts/fzf.sh
+        scripts/zsh-syntax-highlighting.sh
+        scripts/spaceship.sh
         ;;
 
     "macos")
         brew install zsh git curl wget vim ripgrep make cmake gcc socat bat tmux nvim
 
         scripts/fzf.sh
+        scripts/zsh-syntax-highlighting.sh
+        scripts/spaceship.sh
 
         # amethyst
         [ -f ~/.amethyst.yml ] && rm -r ~/.amethyst.yml
@@ -46,11 +52,6 @@ chsh -s /bin/zsh
 
 # mkdir .local
 mkdir ~/.local
-
-# install zsh plugins
-$script_dir/scripts/fzf.sh
-$script_dir/scripts/zsh-syntax-highlighting.sh
-$script_dir/scripts/spaceship.sh
 
 # nvim config
 [ -d ~/.config/nvim ] && rm -r ~/.config/nvim
