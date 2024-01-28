@@ -70,3 +70,7 @@ ln -s $script_dir/.vimrc ~/.vimrc
 
 [ -f ~/.tmux.conf ] && rm -r ~/.tmux.conf
 ln -s $script_dir/.tmux.conf ~/.tmux.conf
+
+[ -f ~/.spaceshiprc.zsh ] && rm -r ~/.spaceshiprc.zsh
+ln -s $script_dir/.spaceshiprc.zsh ~/.spaceshiprc.zsh
+
