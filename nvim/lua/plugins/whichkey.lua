@@ -138,6 +138,15 @@ return {
         vim.cmd([[
             xnoremap <leader>p "_dP
         ]])
+
+        -- Copilot
+        vim.keymap.set('i', '<S-Right>', 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false })
+        vim.keymap.set('i', '<C-Right>', '<Plug>(copilot-accept-line)')
+        vim.keymap.set('i', '<C-Down>', '<Plug>(copilot-accept-word)')
+        vim.keymap.set('i', '<S-Left>', '<Plug>(copilot-dismiss)')
+        vim.keymap.set('i', '<S-Up>', '<Plug>(copilot-next)')
+        vim.keymap.set('i', '<S-Down>', '<Plug>(copilot-previous)')
+
     end
 }
 
