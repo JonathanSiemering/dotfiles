@@ -30,8 +30,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$PATH:$HOME/.local/bin"
 fi
 
-if [ -d "$HOME/.local/nvim/nvim-linux64/bin" ] ; then
-    PATH="$PATH:$HOME/.local/nvim/nvim-linux64/bin"
+if [ -d "$HOME/.local/nvim/nvim-linux-x86_64/bin" ] ; then
+    PATH="$PATH:$HOME/.local/nvim/nvim-linux-x86_64/bin"
 fi
 
 if [ -d "/usr/local/go/bin" ] ; then
