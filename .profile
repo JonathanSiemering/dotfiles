@@ -67,6 +67,7 @@ alias cddotfiles='cd ~/.dotfiles/dotfiles'
 alias cdnvim='cd ~/.dotfiles/dotfiles/nvim'
 
 alias kcontext='kubectl config use-context $(kubectl config get-contexts --output='name' | fzf)'
+alias azsub='az account set --name "$(az account list -o table | awk 'NR > 2 {print $1}' | fzf)"'
 
 # wsl2 ssh agent
 if [[ "$SSH_AGENT" = "wsl2" ]]; then
