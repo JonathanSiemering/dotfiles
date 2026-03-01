@@ -4,7 +4,6 @@ return {
       { "nvim-lua/plenary.nvim", branch = "master" },
     },
     opts = {
-        model = 'gpt-5-mini',
         headers = {
             user = '👤 You',
             assistant = '🤖 Copilot',
