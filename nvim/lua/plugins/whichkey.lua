@@ -44,12 +44,6 @@ return {
 
             -- Layer 2
             { "<leader>z", group = "layer 2" },
-            { "<leader>zh", "<cmd>lua require('telescope').extensions.dap.commands{}<cr>", desc = "DAP Commands" },
-            { "<leader>zn", "<cmd>lua require('telescope').extensions.dap.configurations{}<cr>", desc = "DAP Configurations" },
-            { "<leader>ze", "<cmd>lua require('telescope').extensions.dap.list_breakpoints{}<cr>", desc = "DAP Breakpoints" },
-            { "<leader>zi", "<cmd>lua require('telescope').extensions.dap.variables{}<cr>", desc = "DAP Variables" },
-            { "<leader>zo", "<cmd>lua require('telescope').extensions.dap.frames{}<cr>", desc = "DAP Frames" },
-            { "<leader>zm", "<cmd>lua require('dapui').eval() require('dapui').eval()<cr>", desc = "DAP Variable eval" },
 
             -- Git
             { "<leader>za", "<cmd>:wa<cr> <cmd>lua Lazygit_toggle()<cr>", desc = "Lazygit" },

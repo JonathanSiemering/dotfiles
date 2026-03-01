@@ -4,11 +4,10 @@ return {
     {
         'mason-org/mason-lspconfig.nvim',
         dependencies = {
-            { "mason-org/mason.nvim", opts = {} },
-            'neovim/nvim-lspconfig'
+            { 'mason-org/mason.nvim', opts = {} },
+            'neovim/nvim-lspconfig',
         },
         config = function()
-            local mason = require('mason')
             local mason_lspconfig = require('mason-lspconfig')
             local vars = require('utils.vars')
 
@@ -21,6 +20,13 @@ return {
             end
 
             mason_lspconfig.setup()
+
+            vim.diagnostic.config({
+              virtual_text = true,
+              underline = true,
+              signs = true,
+              update_in_insert = false,
+            })
         end
     },
 
