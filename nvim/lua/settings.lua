@@ -1,35 +1,35 @@
-vim.cmd([[
-    set termguicolors
-    set cursorline
-    set cursorcolumn
-    set mouse=
-    set number
-    set relativenumber
-    set nohlsearch
-    set noerrorbells
-    set tabstop=4 softtabstop=4
-    set shiftwidth=4
-    set expandtab
-    set scrolloff=8
-    set incsearch
-    set nohidden
-    set noswapfile
-    set nobackup
-    set undodir=~/.vim/undodir
-    set undofile
-    set autoread
-    set autowrite
-    set autowriteall
-    set signcolumn=yes
-    set laststatus=3
-    set fillchars+=vert:\|
-]])
+-- Basic settings
+vim.opt.termguicolors = true
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
+vim.opt.mouse = ''
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.hlsearch = false
+vim.opt.errorbells = false
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.scrolloff = 8
+vim.opt.incsearch = true
+vim.opt.hidden = false
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = vim.fn.expand('~/.vim/undodir')
+vim.opt.undofile = true
+vim.opt.autoread = true
+vim.opt.autowrite = true
+vim.opt.autowriteall = true
+vim.opt.signcolumn = 'yes'
+vim.opt.laststatus = 3
+vim.opt.fillchars:append('vert:|')
 
--- Highlight yanked
-vim.cmd([[
-    augroup highlight_yank
-        autocmd!
-        au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Yanked", timeout=600})
-    augroup END
-]])
+-- Highlight yanked text
+vim.api.nvim_create_autocmd('TextYankPost', {
+    group = vim.api.nvim_create_augroup('highlight_yank', { clear = true }),
+    callback = function()
+        vim.highlight.on_yank({ higroup = 'Yanked', timeout = 600 })
+    end,
+})
 

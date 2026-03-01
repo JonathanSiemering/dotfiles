@@ -1,15 +1,18 @@
 return {
-    'akinsho/nvim-bufferline.lua',
+    'akinsho/bufferline.nvim',
+    version = "*",
+    dependencies = 'nvim-tree/nvim-web-devicons',
     config = function()
         local vars = require('utils.vars')
         local bufferline = require('bufferline')
 
         bufferline.setup{
             options = {
-                show_close_icon = false,
-                show_buffer_close_icons = false,
-                separator_style = 'thick',
+                mode = "buffers",
+                style_preset = bufferline.style_preset.thick,
                 numbers = 'ordinal',
+                close_icon = '',
+                buffer_close_icon = '',
                 diagnostics = 'nvim_lsp',
                 diagnostics_indicator = function(count, level, diagnostics_dict, context)
                     local s = ""

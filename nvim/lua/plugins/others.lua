@@ -22,7 +22,13 @@ return {
         config = function() require('nvim-autopairs').setup() end
     },
 
-    -- Indent Blanktline
-    {'lukas-reineke/indent-blankline.nvim'},
+    -- Indent Blankline
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        main = 'ibl',
+        config = function()
+            require('ibl').setup()
+        end
+    },
 
 }

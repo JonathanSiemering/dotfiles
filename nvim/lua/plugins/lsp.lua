@@ -2,8 +2,11 @@ return {
 
     -- LSP config
     {
-        'williamboman/mason-lspconfig.nvim',
-        dependencies = {'neovim/nvim-lspconfig'},
+        'mason-org/mason-lspconfig.nvim',
+        dependencies = {
+            { "mason-org/mason.nvim", opts = {} },
+            'neovim/nvim-lspconfig'
+        },
         config = function()
             local mason = require('mason')
             local mason_lspconfig = require('mason-lspconfig')
@@ -18,18 +21,6 @@ return {
             end
 
             mason_lspconfig.setup()
-            mason_lspconfig.setup_handlers {
-
-                -- default
-                function (server_name)
-                    require('lspconfig')[server_name].setup {}
-                end,
-
-                -- overrides
-                ['lua_ls'] = function() require('lsp.lua-ls') end,
-                ['eslint'] = function() require('lsp.eslint') end,
-                ['omnisharp'] = function() require('lsp.omnisharp') end
-            }
         end
     },
 

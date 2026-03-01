@@ -1,8 +1,7 @@
 return {
-    'kyazdani42/nvim-tree.lua',
-    dependencies = {'kyazdani42/nvim-web-devicons'},
+    'nvim-tree/nvim-tree.lua',
+    dependencies = {'nvim-tree/nvim-web-devicons'},
     config = function()
-        local g = vim.g
         local tree = require('nvim-tree')
         local vars = require('utils.vars')
 
@@ -32,7 +31,7 @@ return {
                             renamed = vars.gitFileRenamed,
                             untracked = vars.gitFileUntracked,
                             deleted = vars.gitFileDeleted,
-                            ignored= vars.gitFileIgnored,
+                            ignored = vars.gitFileIgnored,
                         },
                     },
                 },
