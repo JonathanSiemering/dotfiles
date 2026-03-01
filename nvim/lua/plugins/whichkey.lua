@@ -59,6 +59,9 @@ return {
             { "<leader>zq", "<cmd>lua require('telescope.builtin').buffers()<cr>", desc = "Find Buffer" },
             { "<leader>zw", "<cmd>lua require('telescope.builtin').treesitter()<cr>", desc = "Treesitter search" },
             { "<leader>zf", "<cmd>lua require('telescope.builtin').registers()<cr>", desc = "Registers search" },
+
+            -- Copilot Chat
+            { "<leader>zc", "<cmd>CopilotChatToggle<cr>", desc = "Copilot Chat" },
         })
 
         -- Change Y to copy to end
@@ -109,4 +112,3 @@ return {
         vim.keymap.set('i', '<S-Down>', '<Plug>(copilot-previous)')
     end
 }
-
