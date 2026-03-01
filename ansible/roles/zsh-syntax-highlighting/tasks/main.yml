@@ -1,0 +1,12 @@
+---
+- name: Ensure zsh plugins directory exists
+  ansible.builtin.file:
+    path: "{{ local_dir }}/zsh/plugins"
+    state: directory
+    mode: "0755"
+
+- name: Clone zsh-syntax-highlighting repository
+  ansible.builtin.git:
+    repo: "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+    dest: "{{ local_dir }}/zsh/plugins/zsh-syntax-highlighting"
+    update: true

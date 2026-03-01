@@ -1,0 +1,38 @@
+---
+- name: Install Neovim (Linux only)
+  when: ansible_facts['system'] == "Linux"
+  block:
+    - name: Ensure ~/.local/nvim directory exists
+      ansible.builtin.file:
+        path: "{{ local_dir }}/nvim"
+        state: directory
+        mode: "0755"
+
+    - name: Set Neovim archive name (x86_64)
+      ansible.builtin.set_fact:
+        nvim_archive: "nvim-linux-x86_64"
+      when: ansible_facts['architecture'] != "aarch64"
+
+    - name: Set Neovim archive name (arm64)
+      ansible.builtin.set_fact:
+        nvim_archive: "nvim-linux-arm64"
+      when: ansible_facts['architecture'] == "aarch64"
+
+    - name: Download latest Neovim tarball
+      ansible.builtin.get_url:
+        url: "https://github.com/neovim/neovim/releases/latest/download/{{ nvim_archive }}.tar.gz"
+        dest: "{{ local_dir }}/nvim/nvim.tar.gz"
+        mode: "0644"
+        force: true
+
+    - name: Extract Neovim tarball
+      ansible.builtin.unarchive:
+        src: "{{ local_dir }}/nvim/nvim.tar.gz"
+        dest: "{{ local_dir }}/nvim"
+        extra_opts: ["--strip-components=1"]
+        remote_src: true
+
+    - name: Remove Neovim tarball
+      ansible.builtin.file:
+        path: "{{ local_dir }}/nvim/nvim.tar.gz"
+        state: absent
