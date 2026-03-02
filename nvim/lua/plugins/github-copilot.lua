@@ -2,7 +2,6 @@ return {
     {
         'zbirenbaum/copilot.lua',
         cmd = 'Copilot',
-        event = 'InsertEnter',
         config = function()
             require('copilot').setup({
                 -- Disable inline suggestions; completions are handled via copilot-cmp
