@@ -47,7 +47,8 @@ Rules:
                     prompt = [[@copilot
 #glob:**/*
 #buffer
-When given a task, produce the exact edits to apply using the editor tools. Prioritize minimal, correct changes. If no file edits are needed, respond with a brief plan and exact commands or steps.]]
+When given a task, produce the exact edits to apply using the editor tools. Prioritize minimal, correct changes. If no file edits are needed, respond with a brief plan and exact commands or steps.
+Summerize your changes at the end.]]
                 }
             },
         },
