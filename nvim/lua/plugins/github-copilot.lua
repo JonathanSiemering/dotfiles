@@ -43,12 +43,16 @@ Rules:
 - When modifying files, return edits using the editor's required format with absolute paths.
 - Keep responses concise and in English unless asked otherwise.
 - Ensure code changes do not introduce syntax errors; fix diagnostics if present.
-- If clarification is needed, ask one focused question.]],
+- If clarification is needed, ask one focused question.
+- Summerize your changes at the end.]],
+
                     prompt = [[@copilot
 #glob:**/*
 #buffer
 When given a task, produce the exact edits to apply using the editor tools. Prioritize minimal, correct changes. If no file edits are needed, respond with a brief plan and exact commands or steps.
-Summerize your changes at the end.]]
+
+The Task:
+]]
                 }
             },
         },
