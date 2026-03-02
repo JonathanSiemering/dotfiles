@@ -59,6 +59,9 @@ return {
             { "<leader>zq", "<cmd>lua require('telescope.builtin').buffers()<cr>", desc = "Find Buffer" },
             { "<leader>zw", "<cmd>lua require('telescope.builtin').treesitter()<cr>", desc = "Treesitter search" },
             { "<leader>zf", "<cmd>lua require('telescope.builtin').registers()<cr>", desc = "Registers search" },
+
+            -- Copilot Chat
+            { "<leader>zc", "<cmd>:CopilotChatModels<cr>", desc = "Registers search" },
         })
 
         -- Change Y to copy to end
