@@ -59,9 +59,6 @@ return {
             { "<leader>zq", "<cmd>lua require('telescope.builtin').buffers()<cr>", desc = "Find Buffer" },
             { "<leader>zw", "<cmd>lua require('telescope.builtin').treesitter()<cr>", desc = "Treesitter search" },
             { "<leader>zf", "<cmd>lua require('telescope.builtin').registers()<cr>", desc = "Registers search" },
-
-            -- Copilot Chat
-            { "<leader>zc", "<cmd>CopilotChatToggle<cr>", desc = "Copilot Chat" },
         })
 
         -- Change Y to copy to end
@@ -77,15 +74,9 @@ return {
 
         -- Menu
         vim.keymap.set('n', '<F2>', '<cmd>:wa<CR><cmd>NvimTreeToggle<CR>')
-        vim.keymap.set('n', '<F3>', '<cmd>UndotreeToggle<CR>')
-        vim.keymap.set('n', '<F4>', '<cmd>Outline<CR>')
-
-        -- Debug
-        vim.keymap.set('n', '<F5>', '<cmd>lua require("dapui").open() require(\'dap\').continue()<CR>')
-        vim.keymap.set('n', '<F6>', '<cmd>lua require(\'dap\').step_over()<CR>')
-        vim.keymap.set('n', '<F7>', '<cmd>lua require(\'dap\').step_into()<CR>')
-        vim.keymap.set('n', '<F8>', '<cmd>lua require(\'dap\').close() require(\'dapui\').close() require(\'nvim-dap-virtual-text\').refresh()<CR>')
-        vim.keymap.set('n', '<F9>', '<cmd>lua require(\'dap\').toggle_breakpoint()<CR>')
+        vim.keymap.set('n', '<F3>', '<cmd>:wa<CR><cmd>CopilotChatToggle<CR>')
+        vim.keymap.set('n', '<F4>', '<cmd>UndotreeToggle<CR>')
+        vim.keymap.set('n', '<F5>', '<cmd>Outline<CR>')
 
         -- Buffer
         for i = 1, 9 do

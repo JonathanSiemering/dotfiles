@@ -23,6 +23,12 @@ return {
           { "nvim-lua/plenary.nvim", branch = "master" },
         },
         opts = {
+            window = {
+                layout = "float",
+                border = "rounded",
+                title = "🤖 Copilot Chat",
+                zindex = 100,
+            },
             headers = {
                 user = '👤 You',
                 assistant = '🤖 Copilot',

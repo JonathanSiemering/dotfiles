@@ -69,10 +69,10 @@ return {
                     { name = 'buffer' },
                     { name = 'path' },
                     { name = 'calc' },
-                    { name = 'luasnip' }
+                    { name = 'luasnip' },
                 },
                 mapping = cmp.mapping.preset.insert({
-                    ['<TAB>'] = cmp.mapping.confirm({ select = true }),
+                    ['<S-CR>'] = cmp.mapping.confirm({ select = true }),
                 }),
             }
         end
