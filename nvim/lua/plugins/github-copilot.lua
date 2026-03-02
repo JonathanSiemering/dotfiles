@@ -23,10 +23,7 @@ return {
         },
         opts = {
             window = {
-                layout = "float",
-                border = "rounded",
-                title = "🤖 Copilot Chat",
-                zindex = 100,
+                width = 80,
             },
             headers = {
                 user = '👤 You',
