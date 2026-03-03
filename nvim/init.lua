@@ -17,3 +17,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup('plugins')
+
+-- Auto-update on fresh install (install.sh creates this file)
+local update_file = vim.fn.stdpath('config') .. '/update'
+if vim.uv.fs_stat(update_file) then
+    vim.api.nvim_create_autocmd('VimEnter', {
+        once = true,
+        callback = function()
+            require('lazy').restore()
+            vim.cmd('TSUpdate')
+            vim.cmd('MasonUpdate')
+            os.remove(update_file)
+        end,
+    })
+end
