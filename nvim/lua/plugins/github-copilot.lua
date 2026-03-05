@@ -1,19 +1,12 @@
 return {
     {
         'zbirenbaum/copilot.lua',
-        cmd = 'Copilot',
         config = function()
             require('copilot').setup({
                 -- Disable inline suggestions; completions are handled via copilot-cmp
                 suggestion = { enabled = false },
                 panel = { enabled = false },
             })
-        end,
-    },
-    {
-        'zbirenbaum/copilot-cmp',
-        config = function()
-            require('copilot_cmp').setup()
         end,
     },
     {

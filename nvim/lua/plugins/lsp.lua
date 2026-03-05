@@ -50,6 +50,7 @@ return {
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-calc',
             'saadparwaiz1/cmp_luasnip',
+            { 'zbirenbaum/copilot-cmp', opts = {} },
         },
         config = function()
             local o = vim.o
@@ -73,7 +74,7 @@ return {
                     { name = 'luasnip' },
                 },
                 mapping = cmp.mapping.preset.insert({
-                    ['<S-CR>'] = cmp.mapping.confirm({ select = true }),
+                    ['<TAB>'] = cmp.mapping.confirm({ select = false }),
                 }),
             }
         end
