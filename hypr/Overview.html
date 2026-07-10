@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Hyprland Keyboard Shortcuts</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f5f6f8;
+    --fg: #1b1e23;
+    --muted: #5b6270;
+    --card: #ffffff;
+    --border: #e1e4e9;
+    --accent: #5865f2;
+    --kbd-bg: #eef0f4;
+    --kbd-border: #d2d6de;
+    --row-alt: #fafbfc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1c22;
+      --fg: #e6e8ec;
+      --muted: #9aa1ad;
+      --card: #23262d;
+      --border: #33363f;
+      --accent: #8b93ff;
+      --kbd-bg: #2d3038;
+      --kbd-border: #40434d;
+      --row-alt: #26282f;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 2.5rem 1.5rem 4rem;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .subtitle code {
+    background: var(--kbd-bg);
+    border: 1px solid var(--kbd-border);
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+    font-size: 0.85em;
+  }
+
+  #search {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--fg);
+  }
+  #search:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: -1px;
+  }
+
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.05rem;
+    margin: 0 0 0.9rem;
+    color: var(--accent);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 0.5rem 0.6rem;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.92rem;
+    vertical-align: top;
+  }
+
+  th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody tr:nth-child(odd) {
+    background: var(--row-alt);
+  }
+
+  td.shortcut {
+    white-space: nowrap;
+    width: 42%;
+  }
+
+  kbd {
+    display: inline-block;
+    background: var(--kbd-bg);
+    border: 1px solid var(--kbd-border);
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    padding: 0.15em 0.5em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    margin: 0.1em 0;
+  }
+
+  .plus {
+    color: var(--muted);
+    margin: 0 0.15em;
+    font-size: 0.8em;
+  }
+
+  td code {
+    background: var(--kbd-bg);
+    border: 1px solid var(--kbd-border);
+    border-radius: 4px;
+    padding: 0.1em 0.35em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+  }
+
+  tr.hidden { display: none; }
+  section.hidden { display: none; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Hyprland Keyboard Shortcuts</h1>
+  <p class="subtitle">Mod-Taste (<code>mainMod</code>) ist <code>SUPER</code> (Windows-Taste). Quelle: <code>config/binds.lua</code>.</p>
+
+  <input id="search" type="text" placeholder="Shortcut oder Aktion suchen…" autofocus>
+
+  <section data-section>
+    <h2>Fenster-Verwaltung</h2>
+    <table>
+      <thead><tr><th>Shortcut</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>Escape</kbd></td><td>Aktives Fenster killen (<code>hyprctl kill</code>)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>Q</kbd></td><td>Fenster schließen</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>ALT</kbd><span class="plus">+</span><kbd>Space</kbd></td><td>Floating an/aus</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>D</kbd></td><td>Fullscreen (Mode 1)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>F</kbd></td><td>Fullscreen</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>J</kbd></td><td>Split-Richtung umschalten</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section data-section>
+    <h2>Fokus wechseln</h2>
+    <table>
+      <thead><tr><th>Shortcut</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>Links</kbd>/<kbd>Rechts</kbd>/<kbd>Hoch</kbd>/<kbd>Runter</kbd></td><td>Fokus in Richtung bewegen</td></tr>
+        <tr><td class="shortcut"><kbd>ALT</kbd><span class="plus">+</span><kbd>Tab</kbd></td><td>Zum nächsten Fenster wechseln</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>Tab</kbd></td><td>Noctalia Window-Switcher öffnen</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section data-section>
+    <h2>Fenster verschieben (Workspaces & Monitore)</h2>
+    <table>
+      <thead><tr><th>Shortcut</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span><kbd>Rechts</kbd>/<kbd>Links</kbd>/<kbd>Hoch</kbd>/<kbd>Runter</kbd></td><td>Fenster in Richtung verschieben</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span><kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd></td><td>Fenster zu Monitor 1/2/3</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span>Mausrad hoch</td><td>Fenster zu Monitor +1</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span>Mausrad runter</td><td>Fenster zu Monitor -1</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>CONTROL</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span><kbd>Rechts</kbd></td><td>Fenster zu Workspace relativ +1</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>CONTROL</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span><kbd>Links</kbd></td><td>Fenster zu Workspace relativ -1</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span><kbd>CONTROL</kbd><span class="plus">+</span><kbd>1..N</kbd></td><td>Fenster zu Workspace N auf aktuellem Monitor (N = <code>NUM_WPM</code>, aktuell 3)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section data-section>
+    <h2>Maus</h2>
+    <table>
+      <thead><tr><th>Shortcut</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span>Maustaste 8 (272)</td><td>Fenster ziehen (drag)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span>Maustaste 9 (273)</td><td>Fenster resizen</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section data-section>
+    <h2>Launcher / Anwendungen</h2>
+    <table>
+      <thead><tr><th>Shortcut</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>Return</kbd></td><td>Terminal öffnen (<code>kitty</code>)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>E</kbd></td><td>Dateimanager öffnen (<code>dolphin</code>)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>T</kbd></td><td>Editor öffnen (<code>gnome-text-editor --new-window</code>)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>C</kbd></td><td>Taschenrechner öffnen (<code>gnome-calculator</code>)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>W</kbd></td><td>Browser öffnen (<code>firefox</code>)</td></tr>
+        <tr><td class="shortcut"><kbd>CONTROL</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span><kbd>Escape</kbd></td><td>Terminal mit <code>btop</code> öffnen</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>Z</kbd></td><td>Noctalia Settings umschalten</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>X</kbd></td><td>Noctalia Control-Center umschalten</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>Space</kbd></td><td>Noctalia Launcher umschalten</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>.</kbd> (period)</td><td>Noctalia Launcher (Emoji-Modus <code>/emo</code>)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>L</kbd></td><td>Session sperren</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>ALT</kbd><span class="plus">+</span><kbd>C</kbd></td><td>Noctalia Session-Panel umschalten</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section data-section>
+    <h2>Hardware-Steuerung</h2>
+    <table>
+      <thead><tr><th>Shortcut</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td class="shortcut"><kbd>XF86AudioRaiseVolume</kbd></td><td>Lautstärke hoch</td></tr>
+        <tr><td class="shortcut"><kbd>XF86AudioLowerVolume</kbd></td><td>Lautstärke runter</td></tr>
+        <tr><td class="shortcut"><kbd>XF86AudioMute</kbd></td><td>Stumm schalten</td></tr>
+        <tr><td class="shortcut"><kbd>XF86AudioMicMute</kbd></td><td>Mikrofon stumm schalten</td></tr>
+        <tr><td class="shortcut"><kbd>XF86AudioPlay</kbd> / <kbd>XF86AudioPause</kbd></td><td>Medienwiedergabe umschalten</td></tr>
+        <tr><td class="shortcut"><kbd>XF86AudioNext</kbd></td><td>Nächster Titel</td></tr>
+        <tr><td class="shortcut"><kbd>XF86AudioPrev</kbd></td><td>Vorheriger Titel</td></tr>
+        <tr><td class="shortcut"><kbd>XF86MonBrightnessUp</kbd></td><td>Helligkeit hoch</td></tr>
+        <tr><td class="shortcut"><kbd>XF86MonBrightnessDown</kbd></td><td>Helligkeit runter</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section data-section>
+    <h2>Utilities</h2>
+    <table>
+      <thead><tr><th>Shortcut</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>P</kbd></td><td>Hyprpicker (Farbe von Bildschirm aufnehmen)</td></tr>
+        <tr><td class="shortcut"><kbd>Print</kbd></td><td>Screenshot-Bereich auswählen</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>Print</kbd></td><td>Vollbild-Screenshot</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span><kbd>W</kbd></td><td>Wallpaper-Panel umschalten</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>V</kbd></td><td>Clipboard-Panel umschalten</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>A</kbd></td><td>Benachrichtigungs-Center umschalten</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section data-section>
+    <h2>Workspaces & Monitore</h2>
+    <table>
+      <thead><tr><th>Shortcut</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>1</kbd>/<kbd>2</kbd>/<kbd>3</kbd></td><td>Fokus auf Monitor 1/2/3</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>TAB</kbd><span class="plus">+</span><kbd>1..N</kbd></td><td>Fokus auf Workspace N (absolut, N = <code>NUM_WPM</code>, aktuell 3)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>CONTROL</kbd><span class="plus">+</span><kbd>1..N</kbd></td><td>Fokus auf Workspace N relativ zum aktuellen Monitor</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>CONTROL</kbd><span class="plus">+</span><kbd>Rechts</kbd></td><td>Fokus zu Monitor +1</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>CONTROL</kbd><span class="plus">+</span><kbd>Links</kbd></td><td>Fokus zu Monitor -1</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>CONTROL</kbd><span class="plus">+</span><kbd>Runter</kbd></td><td>Fokus zum nächsten leeren Monitor</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span>Mausrad runter</td><td>Workspace +1 (Monitor)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span>Mausrad hoch</td><td>Workspace -1 (Monitor)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>CONTROL</kbd><span class="plus">+</span>Mausrad hoch</td><td>Workspace +1 (Monitor)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>CONTROL</kbd><span class="plus">+</span>Mausrad runter</td><td>Workspace -1 (Monitor)</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>SHIFT</kbd><span class="plus">+</span><kbd>S</kbd></td><td>Fenster in Special Workspace (Scratchpad) verschieben</td></tr>
+        <tr><td class="shortcut"><kbd>SUPER</kbd><span class="plus">+</span><kbd>S</kbd></td><td>Special Workspace (Scratchpad) umschalten</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section data-section>
+    <h2>Gesten</h2>
+    <table>
+      <thead><tr><th>Geste</th><th>Aktion</th></tr></thead>
+      <tbody>
+        <tr><td class="shortcut">3-Finger horizontal</td><td>Workspace wechseln</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>Generiert aus Overview.md</footer>
+</div>
+
+<script>
+  const search = document.getElementById('search');
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    document.querySelectorAll('section[data-section]').forEach(section => {
+      let visibleRows = 0;
+      section.querySelectorAll('tbody tr').forEach(row => {
+        const match = row.textContent.toLowerCase().includes(q);
+        row.classList.toggle('hidden', !match);
+        if (match) visibleRows++;
+      });
+      section.classList.toggle('hidden', visibleRows === 0);
+    });
+  });
+</script>
+</body>
+</html>
