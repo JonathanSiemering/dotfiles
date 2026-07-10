@@ -25,6 +25,13 @@ vim.opt.signcolumn = 'yes'
 vim.opt.laststatus = 3
 vim.opt.fillchars:append('vert:|')
 
+-- Compat shims: galaxyline.nvim and symbols-outline.nvim (unmaintained) still
+-- call these removed/deprecated LSP APIs, spamming vim.deprecated warnings.
+vim.lsp.get_active_clients = vim.lsp.get_clients
+vim.lsp.buf_get_clients = function(bufnr)
+    return vim.lsp.get_clients({ bufnr = bufnr or 0 })
+end
+
 -- Highlight yanked text
 vim.api.nvim_create_autocmd('TextYankPost', {
     group = vim.api.nvim_create_augroup('highlight_yank', { clear = true }),
