@@ -2,8 +2,8 @@
 
 hl.config({
     input = {
-        sensitivity = 0.8,
-        accel_profile = "flat",
+        sensitivity = 0.5,
+        accel_profile = "adaptive",
         kb_options = "caps:escape",
 	touchpad = {
 		natural_scroll = true
